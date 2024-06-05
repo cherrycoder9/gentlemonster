@@ -1,0 +1,13 @@
+:root {
+    --color-shadow: #f8f7f5;
+    --color-dark: #252629;
+    --color-light: #ffffff;
+}
+
+/*
+    색상 적용시 아래와 같이 하면 됨
+*/
+
+/* footer {
+    background-color: var(--color-shadow);
+} */
