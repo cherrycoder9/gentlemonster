@@ -12,14 +12,11 @@
 <!-- 메인페이지 -->
 
 <body>
-    <div id="here">
-    </div>
-    <script>
-        const productList = JSON.parse(localStorage.getItem('productList'));
-        let html = '';
-        html = `<img src="${productList[10].imageUrl}" />`;
-        document.querySelector('#here').innerHTML = html;
-    </script>
+    <script src='/js/common/header.js'></script>
+
+
+
+    <script src='/js/common/footer.js'></script>
 </body>
 
 </html>
