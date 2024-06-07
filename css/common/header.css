@@ -6,11 +6,3 @@ header {
 header ul {
     display: flex;
 }
-
-footer>#links {
-    display: flex;
-}
-
-footer>#info {
-    display: flex;
-}

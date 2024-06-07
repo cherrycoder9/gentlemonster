@@ -1,3 +1,8 @@
+footer {
+    background-color: var(--color-shadow);
+    padding-bottom: 35px;
+}
+
 footer #info>div:first-child {
     width: 25%;
     text-align: center;
@@ -5,4 +10,35 @@ footer #info>div:first-child {
 
 footer span {
     text-decoration-line: underline;
+    font-size: 11px;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer li>a {
+    color: grey;
+}
+
+footer ul {
+    margin-top: 70px;
+    margin-right: 150px;
+    margin-bottom: 70px;
+}
+
+footer ul:first-child {
+    margin-left: 70px;
+}
+
+footer>#links {
+    display: flex;
+}
+
+footer>#info {
+    display: flex;
+}
+
+footer h3 {
+    margin-bottom: 15px;
 }
