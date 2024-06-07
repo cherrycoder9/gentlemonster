@@ -6,7 +6,7 @@ function loadFooter() {
                 <li>
                     <h3>고객 서비스</h3>
                 </li>
-                <li><a href="#">문의</a></li>
+                <li><a href="/x-customercare/customer-service.html">문의</a></li>
                 <li><a href="#">배송</a></li>
                 <li><a href="#">서비스</a></li>
                 <li><a href="#">교환 및 반품</a></li>
@@ -16,7 +16,7 @@ function loadFooter() {
                 <li><a href="#">수리서비스 가이드</a></li>
                 <li><a href="#">제품 사용 가이드</a></li>
                 <li><a href="#">정품 인증</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="/x-customercare/faq.html">FAQ</a></li>
             </ul>
             <ul>
                 <li>
