@@ -1,0 +1,68 @@
+#videoBox {
+    position: relative;
+    width: 100%;
+}
+
+#video {
+    width: 100%;
+}
+
+#videoBox>h1 {
+    position: absolute;
+    top: 50%;
+    right: 33%;
+    color: white;
+    font-size: 20px;
+}
+
+#listBox {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+
+}
+
+#listBox>div {
+    padding: 15px;
+
+
+}
+
+#listBox>div>span {
+    padding: 15px;
+    font-size: 15px;
+    margin-left: 150px;
+}
+
+#onlineSer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+}
+
+#onlineSer>div {
+    margin: 30px;
+}
+
+#onlineSer>h1 {
+    font-size: 20px;
+}
+
+#btn>button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
