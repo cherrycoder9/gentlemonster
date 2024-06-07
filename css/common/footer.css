@@ -1,1 +1,8 @@
-/*  */
+footer #info>div:first-child {
+    width: 25%;
+    text-align: center;
+}
+
+footer span {
+    text-decoration-line: underline;
+}
