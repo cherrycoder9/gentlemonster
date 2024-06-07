@@ -6,11 +6,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='customer-service.css'>
     <!-- <script src='main.js'></script> -->
-    <script src='/js/common/header.js' defer></script>
-    <script src='/js/common/footer.js' defer></script>
+    <script src='../js/common/header.js' defer></script>
+    <script src='customer-service.js' defer></script>
+    <script src='../js/common/footer.js' defer></script>
 </head>
 <!-- 고객서비스 메인 설명 페이지 -->
 
@@ -20,7 +21,7 @@
         <div id="sideMenu">
             <h2> 고객 서비스 </h2>
             <ul>
-                <li> <a href="#"> 문의 </a> </li>
+                <li> <a href="customer-service.html"> 문의 </a> </li>
                 <li> <a href="#"> 배송 </a> </li>
                 <li> <a href="#"> 서비스 </a> </li>
                 <li> <a href="#"> 교환 및 반품 </a> </li>
@@ -34,7 +35,44 @@
             </ul>
         </div>
         <div id="content">
+            <div>
+                <h2>일반 문의</h2>
+                <div class="contentBox">
+                    <p>주문, 배송, 제품, 결제 등 궁금한 사항이 있으시거나 도움이 필요하시면 아래 편하신 방법으로 연락주시기 바랍니다.</p>
+                    <div class="contentBtn">
+                        <button onclick="msg()" type="button">실시간 채팅 상담</button><button type="button">게시판 문의하기</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>수리 문의</h2>
+                <div class="contentBox">
+                    <p>제품 사용 중 불편한 점이 있으시거나, 제품 관리 및 수리에 관하여 궁금한 점이 있으실 경우 언제든지 연락해 주시기 바랍니다.<br />
+                        수리 서비스(접수방법, 기간, 비용책정) 관련 자세한 내용은 수리서비스 가이드 를 참고해주세요.</p>
+                    <div class="contentBtn">
+                        <button onclick="msg()" type="button">실시간 채팅 상담</button><button type="button">게시판 문의하기</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>마케팅 문의</h2>
+                <div class="contentBox">
+                    <p>마케팅과 관련하여 궁금한 점이 있으실 경우 아래 이메일로 연락 주시기 바랍니다. <br />
+                        문의 내용과 연락처를 남겨 주시면 관련부서에서 확인 후 필요시 개별적으로 연락 드리겠습니다.</p>
+                    <div class="contentBtn">
+                        <button type="button">이메일 문의하기</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>대표번호 : 1600-2126</h2>
+                <p>(일반 문의 : 내선 1번 / 수리문의 : 내선 2번)<br />
+                    *근로자 보호 및 서비스 품질 향상을 위해 모든 통화 내용이 녹음됩니다.<br />
+                    온라인 고객 서비스 운영시간<br /><br />
 
+                    운영시간 : AM 09:30 - PM 17:00 (주말 및 공휴일 휴무)<br />
+                    점심시간 : PM 12:00 - PM 13:00</p>
+            </div>
         </div>
     </div>
     <footer></footer>

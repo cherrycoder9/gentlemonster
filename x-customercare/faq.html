@@ -6,17 +6,53 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='faq.css'>
     <!-- <script src='main.js'></script> -->
-    <script src='/js/common/header.js' defer></script>
-    <script src='/js/common/footer.js' defer></script>
+    <script src='../js/common/header.js' defer></script>
+
+    <script src='faq.js'></script>
+
+    <script src='../js/common/footer.js' defer></script>
+
 </head>
 <!-- 고객서비스 FAQ 페이지 -->
 
 <body>
     <header></header>
 
+    <div id="wrap">
+        <div id="sideMenu">
+            <h2> FAQ </h2>
+            <ul>
+                <li> <a href="#"> 회원계정 </a> </li>
+                <li> <a href="#"> 주문 </a> </li>
+                <li> <a href="#"> 제품 </a> </li>
+                <li> <a href="#"> 프로덕트서비스&A/S </a> </li>
+                <li> <a href="#"> 결제 </a> </li>
+                <li> <a href="#"> 배송 </a> </li>
+                <li> <a href="#"> 취소/반품 </a> </li>
+                <li> <a href="#"> 선물하기 </a> </li>
+                <li> <a href="#"> 매장 픽업 </a> </li>
+                <li> <a href="#"> 당일 배송 </a> </li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2> 회원 계정</h2>
+            <button type="button" class="collapsible" onclick="collapse(this);">제목 1</button>
+            <div class="content">
+                <p>내용 1 입니다.</p>
+            </div>
+            <button type="button" class="collapsible" onclick="collapse(this);">제목 2</button>
+            <div class="content">
+                <p>내용 2 입니다.</p>
+            </div>
+            <button type="button" class="collapsible" onclick="collapse(this);">제목 3</button>
+            <div class="content">
+                <p>내용 3 입니다.</p>
+            </div>
+        </div>
+    </div>
     <footer></footer>
 </body>
 
