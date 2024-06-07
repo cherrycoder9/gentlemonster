@@ -1,3 +1,12 @@
+(function () {
+    var currentPath = window.location.pathname;
+    if (currentPath.endsWith("index.html")) {
+        document.body.classList.add("index-page");
+    } else {
+        document.body.classList.add("other-page");
+    }
+})();
+
 loadHeader();
 function loadHeader() {
     const headerHTML = `
