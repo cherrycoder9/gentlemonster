@@ -11,12 +11,14 @@ const glassesPhotoCount = 156;
 
 // 제품 객체가 크기 때문에 조건부로 로컬 스토리지에 저장
 // 제품 등록이나 수정 페이지가 없으므로 총 553개 제품 고정으로 사용함
+let productList = [];
 if (!localStorage.getItem('productList')) {
     console.log('로컬 스토리지에 없으므로 제품리스트 등록하고 변수에 저장');
-    const productList = saveProductListToLocalStorage();
+    productList = saveProductListToLocalStorage();
     localStorage.setItem('productList', JSON.stringify(productList));
 } else {
-    console.log('로컬 스토리지에 있음. 제품리스트 재등록 하지 않음');
+    console.log('로컬 스토리지에 있음. 제품리스트 스토리지에 재등록 하지 않음');
+    productList = saveProductListToLocalStorage();
 }
 
 function saveProductListToLocalStorage() {
