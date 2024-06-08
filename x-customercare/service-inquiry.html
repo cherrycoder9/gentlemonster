@@ -7,8 +7,8 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/customercare/service-inquiry.css'>
+    <script src='../js/customercare/service-inquiry.js'></script>
     <script src='../js/common/header.js' defer></script>
     <script src='../js/common/footer.js' defer></script>
 </head>
@@ -16,7 +16,76 @@
 
 <body>
     <header></header>
-
+    <div id="wrap">
+        <div id="sideMenu">
+            <h2> 고객 서비스 </h2>
+            <ul>
+                <li> <a href="customer-service.html"> 문의 </a> </li>
+                <li> <a href="#"> 배송 </a> </li>
+                <li> <a href="#"> 서비스 </a> </li>
+                <li> <a href="#"> 교환 및 반품 </a> </li>
+                <li> <a href="#"> 주문조회 </a> </li>
+                <li> <a href="#"> 주문취소 </a> </li>
+                <li> <a href="#"> 매장 픽업 서비스 </a> </li>
+                <li> <a href="#"> 수리 서비스 가이드 </a> </li>
+                <li> <a href="#"> 제품 사용 가이드 </a> </li>
+                <li> <a href="#"> 정품 인증 </a> </li>
+                <li> <a href="faq.html"> FAQ </a> </li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2> 게시판문의 </h2>
+            <div id="mainContnet">자세한 문의 내용과 연락처를 남겨주시면 빠른 시일 내에 연락드리겠습니다.</div>
+            <div>
+                <div class="contentBox">
+                    <p>성별</p>
+                    <select>
+                        <option value selected disabled style="display: none;"> 성별 </option>
+                        <option> 남성 </option>
+                        <option> 여성 </option>
+                    </select>
+                </div>
+                <div class="contentBox">
+                    <p>이름</p>
+                    <input class="textType" type="text" />
+                </div>
+                <div class="contentBox">
+                    <p>이메일</p>
+                    <input class="textType" type="text" />
+                </div>
+                <div class="contentBox">
+                    <p> 주제 </p>
+                    <select>
+                        <option value selected disabled style="display: none;"> 주제 선택 </option>
+                        <option> 제품 </option>
+                        <option> 배송 </option>
+                        <option> 수리 </option>
+                        <option> 매장경험 </option>
+                        <option> 교환 및 반품 </option>
+                        <option> 기타 </option>
+                    </select>
+                </div>
+                <div class="contentBox">
+                    <p> 제목 </p>
+                    <input class="textType" type="text" />
+                </div>
+                <div class="contentBox2">
+                    <p> 메시지 </p>
+                    <textarea placeholder="메시지를 입력해주세요"></textarea> <br/>
+                </div>
+                <div id="checkBox">
+                    <input type="checkbox" /> 전체 동의<br/>
+                    <input type="checkbox" /> [필수] 만 14세 이상입니다<br/>
+                    <input type="checkbox" /> [필수] 이용약관 동의<br/>
+                    <input type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br/>
+                    <input type="checkbox" /> [선택] 개인정보 수집 및 이용 동의<br/>
+                    <input type="checkbox" /> [선택] 마케팅 정보 수신 및 활용 동의<br/>
+                    <button type="button"> 게시판 등록하기 </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     <footer></footer>
 </body>
 

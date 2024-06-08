@@ -1,0 +1,56 @@
+#wrap {
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 70px;
+}
+
+#sideMenu {
+    width: 400px;
+    height: 600px;
+    padding-top: 80px;
+}
+
+#sideMenu>h2 {
+    margin-bottom: 30px;
+}
+
+#sideMenu li {
+    margin-bottom: 22px;
+}
+#content {
+    margin-top: 160px;
+    width: 875px;
+}
+#content>h2{
+    margin-bottom: 26px;
+}
+#mainContnet{
+    margin-bottom: 26px;
+}
+#content select{
+    width: 440px; height: 40px;
+}
+#content .textType{
+    width: 440px; height: 40px;
+}
+#content textarea{
+    width: 440px; height: 220px;
+    padding: 6px 12px;
+    margin-bottom: 50px;
+}
+.contentBox{
+    width: 440px; height: 85px;
+}
+.contentBox > p{
+    margin-bottom: 5px;
+}
+.contentBox2 > p{
+    margin-bottom: 5px;
+}
+#checkBox > input{
+    margin-bottom: 10px;
+}
+#checkBox > button{
+    margin-top: 40px;
+}
