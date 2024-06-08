@@ -1,5 +1,5 @@
 (function () {
-    var videos = document.querySelectorAll('video');
+    let videos = document.querySelectorAll('video');
 
     videos.forEach(function (video) {
         video.onended = function () {

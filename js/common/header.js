@@ -1,36 +1,43 @@
-(function () {
-    var currentPath = window.location.pathname;
-    if (currentPath.endsWith("index.html")) {
-        document.body.classList.add("index-page");
-    } else {
-        document.body.classList.add("other-page");
-    }
-})();
-
 loadHeader();
 function loadHeader() {
     const headerHTML = `
         <div id="logo">
-            <a href="/index.html">GENTLE MONSTER</a>
+            <a href="../index.html">GENTLE MONSTER</a>
         </div>
         <div id="mainMenu">
             <ul>
-                <li><a href="#">선글라스</a></li>
-                <li><a href="#">안경</a></li>
-                <li><a href="#">콜라보레이션</a></li>
-                <li><a href="#">스타일</a></li>
-                <li><a href="#">브랜드이슈</a></li>
-                <li><a href="#">매장보기</a></li>
-                <li><a href="#">수리서비스</a></li>
+                <li><a href="../x-customer/sunglasses.html">선글라스</a></li>
+                <li><a href="../x-customer/glasses.html">안경</a></li>
+                <li><a href="#"><s>콜라보레이션</s></a></li>
+                <li><a href="#"><s>스타일</s></a></li>
+                <li><a href="#"><s>브랜드이슈</s></a></li>
+                <li><a href="#"><s>매장보기</s></a></li>
+                <li><a href="./x-productservice/repair_guide.html">수리서비스</a></li>
             </ul>
         </div>
         <div id="utilMenu">
             <ul>
-                <li><a href="#">ㅇ</a></li>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">ㅇ</a></li>
+                <li><a href="#"><img id="searchSvg" src="#"></img></a></li>
+                <li><a href="./x-customer/login.html">로그인</a></li>
+                <li><a href="#"><img id="cartSvg" src="#"></img></a></li>
             </ul>
         </div>
     `;
     document.querySelector('header').innerHTML = headerHTML;
 }
+
+(function () {
+    let currentPath = window.location.pathname;
+    let searchSvg = document.querySelector('#searchSvg');
+    let cartSvg = document.querySelector('#cartSvg');
+    console.log(currentPath);
+    if (currentPath.endsWith("/index.html") || currentPath == "/" || currentPath == "") {
+        document.body.classList.add("indexPage");
+        searchSvg.src = '../../img/icon/search-white.svg';
+        cartSvg.src = '../../img/icon/cart-white.svg';
+    } else {
+        document.body.classList.add("otherPage");
+        searchSvg.src = '../../img/icon/search-black.svg';
+        cartSvg.src = '../../img/icon/cart-black.svg';
+    }
+})();

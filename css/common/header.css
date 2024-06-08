@@ -1,12 +1,20 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
+}
+
+.indexPage header {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 999;
+}
+
+.otherPage header {
+    background-color: rgb(255, 255, 255, 1);
     z-index: 999;
 }
 
@@ -17,7 +25,16 @@ header ul {
 #mainMenu a,
 #utilMenu a {
     font-size: 15px;
+}
+
+.indexPage #mainMenu a,
+.indexPage #utilMenu a {
     color: white;
+}
+
+.otherPage #mainMenu a,
+.otherPage #utilMenu a {
+    color: black;
 }
 
 #mainMenu li,
@@ -33,13 +50,13 @@ header ul {
     height: 100%;
     text-align: center;
     align-content: center;
-    color: white;
 }
 
 #utilMenu li img {
     display: flex;
-    fill: white;
 }
+
+
 
 #logo {
     align-content: center;
@@ -49,19 +66,45 @@ header ul {
     display: block;
     font-size: 23px;
     font-weight: bold;
+}
+
+.indexPage #logo a {
     color: white;
 }
 
-#mainpageContents video {
+.otherPage #logo a {
+    color: black;
+}
+
+.textContainer video {
     width: 100%;
+    height: auto;
     display: block;
     padding: 0;
     margin: 0;
 }
 
-#mainpageContents img {
+.textContainer img {
     width: 100%;
+    height: auto;
     display: block;
     padding: 0;
     margin: 0;
+}
+
+.textContainer {
+    position: relative;
+
+}
+
+.overlayText {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 30px;
+    cursor: default;
+    user-select: none;
 }
