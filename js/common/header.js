@@ -1,5 +1,6 @@
 loadHeader();
 function loadHeader() {
+    console.log('loadHeader() 함수 진입');
     let headerHTML = '';
     let currentPath = window.location.pathname;
 
@@ -82,4 +83,5 @@ function loadHeader() {
         link.type = 'image/x-icon';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
+    console.log('loadHeader() 함수 진입');
 }

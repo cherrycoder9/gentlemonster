@@ -1,3 +1,4 @@
+console.log('js/object/product-list.js 파일 진입');
 // 상품 리스트 객체 관련 파일
 // 세원 파트
 
@@ -22,6 +23,7 @@ if (!localStorage.getItem('productList')) {
 }
 
 function saveProductListToLocalStorage() {
+    console.log('saveProductListToLocalStorage() 함수 진입');
     // 제품 리스트
     const productList = [
         {
@@ -5555,5 +5557,6 @@ function saveProductListToLocalStorage() {
             "material": "Combination"
         }
     ];
+    console.log('saveProductListToLocalStorage() 함수 종료');
     return productList;
 }

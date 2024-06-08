@@ -1,5 +1,6 @@
 loadFooter();
 function loadFooter() {
+    console.log('loadFooter() 함수 진입');
     const footerHTML = `
         <div id="links">
             <ul>
@@ -56,4 +57,5 @@ function loadFooter() {
         </div>
     `;
     document.querySelector('footer').innerHTML = footerHTML;
+    console.log('loadFooter() 함수 종료');
 }

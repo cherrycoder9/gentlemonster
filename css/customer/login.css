@@ -1,1 +1,43 @@
-/*  */
+.loginLayout {
+    width: 30%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.loginLayout>form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.loginLayout>form>h3 {
+    margin-bottom: 20px;
+}
+
+.loginLayout>form>div {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.loginLayout>form>div>* {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.loginLayout>form>div>input {
+    height: 40px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.loginLayout>form>button {
+    width: 100%;
+    margin: 5px;
+    margin-top: 20px;
+    align-self: center;
+}
