@@ -7,39 +7,39 @@ function loadFooter() {
                     <h3>고객 서비스</h3>
                 </li>
                 <li><a href="/x-customercare/customer-service.html">문의</a></li>
-                <li><a href="#">배송</a></li>
-                <li><a href="#">서비스</a></li>
-                <li><a href="#">교환 및 반품</a></li>
-                <li><a href="#">주문조회</a></li>
-                <li><a href="#">주문취소</a></li>
-                <li><a href="#">매장 픽업 서비스</a></li>
-                <li><a href="#">수리서비스 가이드</a></li>
-                <li><a href="#">제품 사용 가이드</a></li>
-                <li><a href="#">정품 인증</a></li>
+                <li><a href="#"><s>배송</s></a></li>
+                <li><a href="#"><s>서비스</s></a></li>
+                <li><a href="#"><s>교환 및 반품</s></a></li>
+                <li><a href="#"><s>주문조회</s></a></li>
+                <li><a href="#"><s>주문취소</s></a></li>
+                <li><a href="#"><s>매장 픽업 서비스</s></a></li>
+                <li><a href="#"><s>수리서비스 가이드</s></a></li>
+                <li><a href="#"><s>제품 사용 가이드</s></a></li>
+                <li><a href="#"><s>정품 인증</s></a></li>
                 <li><a href="/x-customercare/faq.html">FAQ</a></li>
             </ul>
             <ul>
                 <li>
                     <h3>법적 고지</h3>
                 </li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">쿠키 정책</a></li>
-                <li><a href="#">기프트카드 이용약관</a></li>
+                <li><a href="#"><s>공지사항</s></a></li>
+                <li><a href="#"><s>이용약관</s></a></li>
+                <li><a href="#"><s>개인정보처리방침</s></a></li>
+                <li><a href="#"><s>쿠키 정책</s></a></li>
+                <li><a href="#"><s>기프트카드 이용약관</s></a></li>
             </ul>
             <ul>
                 <li>
                     <h3>소셜 미디어</h3>
                 </li>
-                <li><a href="#">페이스북</a></li>
-                <li><a href="#">인스타그램</a></li>
-                <li><a href="#">유튜브</a></li>
-                <li><a href="#">X</a></li>
-                <li><a href="#">카카오톡</a></li>
-                <li><a href="#">핀터레스트</a></li>
-                <li><a href="#">위챗</a></li>
-                <li><a href="#">웨이보</a></li>
+                <li><a href="#"><s>페이스북</s></a></li>
+                <li><a href="#"><s>인스타그램</s></a></li>
+                <li><a href="#"><s>유튜브</s></a></li>
+                <li><a href="#"><s>X</s></a></li>
+                <li><a href="#"><s>카카오톡</s></a></li>
+                <li><a href="#"><s>핀터레스트</s></a></li>
+                <li><a href="#"><s>위챗</s></a></li>
+                <li><a href="#"><s>웨이보</s></a></li>
             </ul>
         </div>
         <div id="info">

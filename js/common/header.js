@@ -30,10 +30,18 @@ function loadHeader() {
         </div>
     `;
         document.querySelector('header').innerHTML = headerHTML;
+        // 하얀색 아이콘
         let searchSvg = document.querySelector('#searchSvg');
         let cartSvg = document.querySelector('#cartSvg');
         searchSvg.src = './img/icon/search-white.svg';
         cartSvg.src = './img/icon/cart-white.svg';
+
+        // 파비콘 삽입
+        let link = document.createElement('link');
+        link.rel = 'shortcut icon';
+        link.href = './img/gm-logo/favicon-96.png';
+        link.type = 'image/x-icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
 
     } else {
         document.body.classList.add("otherPage");
@@ -61,9 +69,17 @@ function loadHeader() {
         </div>
     `;
         document.querySelector('header').innerHTML = headerHTML;
+        // 검은색 아이콘 
         let searchSvg = document.querySelector('#searchSvg');
         let cartSvg = document.querySelector('#cartSvg');
         searchSvg.src = '../img/icon/search-black.svg';
         cartSvg.src = '../img/icon/cart-black.svg';
+
+        // 파비콘 삽입 
+        let link = document.createElement('link');
+        link.rel = 'shortcut icon';
+        link.href = '../img/gm-logo/favicon-96.png';
+        link.type = 'image/x-icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
     }
 }
