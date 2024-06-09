@@ -6,6 +6,7 @@ function loadHeader() {
 
     console.log(currentPath);
     if (currentPath.endsWith("/index.html") || currentPath == "/" || currentPath == "") {
+        // body에 indexPage 클래스 값 추가
         document.body.classList.add("indexPage");
         headerHTML = `
         <div id="logo">
@@ -25,7 +26,7 @@ function loadHeader() {
         <div id="utilMenu">
             <ul>
                 <li><a href="#"><img id="searchSvg" src="#"></img></a></li>
-                <li><a href="./x-customer/login.html">로그인</a></li>
+                <li id="sessionCheck"></li>
                 <li><a href="#"><img id="cartSvg" src="#"></img></a></li>
             </ul>
         </div>
@@ -45,6 +46,7 @@ function loadHeader() {
         document.getElementsByTagName('head')[0].appendChild(link);
 
     } else {
+        // body에 otherPage 클래스 값 추가
         document.body.classList.add("otherPage");
         headerHTML = `
         <div id="logo">
@@ -64,7 +66,7 @@ function loadHeader() {
         <div id="utilMenu">
             <ul>
                 <li><a href="#"><img id="searchSvg" src="#"></img></a></li>
-                <li><a href="../x-customer/login.html">로그인</a></li>
+                <li id="sessionCheck"></li>
                 <li><a href="#"><img id="cartSvg" src="#"></img></a></li>
             </ul>
         </div>
@@ -83,5 +85,13 @@ function loadHeader() {
         link.type = 'image/x-icon';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
-    console.log('loadHeader() 함수 진입');
+
+    let sessionCheck = document.querySelector('#sessionCheck');
+    if (sessionStorage.getItem('loginMemberId')) {
+        sessionCheck.innerHTML = '<a href="./x-customer/user-info.html">회원정보</a>';
+    } else {
+        sessionCheck.innerHTML = '<a href="./x-customer/login.html">로그인</a>';
+    }
+
+    console.log('loadHeader() 함수 종료');
 }

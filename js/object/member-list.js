@@ -1,26 +1,22 @@
 // 회원 가입시 등록되는 객체 예시
 // 세원 파트
-const memberList = [
-    {
-        memberId: 1,
-        email: "didwodus1234@gmail.com",
-        password: "123456",
-        gender: "Female",
-        name: "Yang Jaeyeon",
-        birthDate: "1995-10-05",
-        contact: "01057102705",
-        nationality: "South Korea",
-        isAdmin: true
-    },
-    {
-        memberId: 2,
-        email: "inthenovel.hwa@gmail.com",
-        password: "456789",
-        gender: "Male",
-        name: "Yoo Jaesuk",
-        birthDate: "1995-10-05",
-        contact: "01045551125",
-        nationality: "South Korea",
-        isAdmin: false
+console.log(`js/object/member-list.js 파일 진입`);
+let memberList = [];
+getMemberList();
+
+function getMemberList() {
+    console.log(`getMemberList() 함수 진입`);
+    if (localStorage.getItem('memberList')) {
+        memberList = JSON.parse(localStorage.getItem('memberList'));
+        console.log(`memberList`, memberList);
     }
-];
+    console.log(`getMemberList() 함수 종료`);
+}
+
+function setMemberList(newMember) {
+    console.log(`setMemberList() 함수 진입`);
+    memberList.push(newMember); // JS 메모리에 추가 
+    localStorage.setItem('memberList', JSON.stringify(memberList)); // 로컬 업데이트
+    getMemberList(); // JS 메모리 갱신
+    console.log(`setMemberList() 함수 종료`);
+}

@@ -7,16 +7,51 @@
     <title>GENTLE MONSTER Official Site</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/customer/signup.css'>
+    <script src='../js/object/member-list.js'></script>
     <script src='../js/common/header.js' defer></script>
     <script src='../js/common/footer.js' defer></script>
+    <script src='../js/customer/signup.js' defer></script>
 </head>
 <!-- 회원가입 페이지 -->
 
 <body>
     <header></header>
+    <div class="signupLayout">
+        <form>
+            <h3 class="font-size-19">신규 회원가입</h3>
+            <div>
+                <label for="signupEmail">이메일 주소</label>
+                <input type="email" id="signupEmail" autocomplete="username" />
+            </div>
+            <div>
+                <label for="signupEmailCheck">이메일 주소 확인</label>
+                <input type="email" id="signupEmailCheck" autocomplete="username" />
+            </div>
+            <div>
+                <label for="signupPassword">비밀번호</label>
+                <input type="password" id="signupPassword" autocomplete="current-password" />
+            </div>
+            <div>
+                <label for="signupPasswordCheck">비밀번호 확인</label>
+                <input type="password" id="signupPasswordCheck" autocomplete="current-password" />
+            </div>
+            <div>
+                <label for="signupGender">성별</label>
+                <select id="signupGender">
+                    <option value="" disabled selected>성별을 선택해 주세요</option>
+                    <option value="male">남자</option>
+                    <option value="female">여자</option>
+                </select>
+            </div>
+            <div>
+                <label for="signupName">이름</label>
+                <input type="text" id="signupName" autocomplete="username" />
+            </div>
+            <button type="button" onclick="handleSignupClick()">계정생성</button>
+        </form>
 
+    </div>
     <footer></footer>
 </body>
 
