@@ -6,7 +6,7 @@ console.log(회원목록);
 function 등록() {
     console.log('등록()');
 
-    localStorage.setItem('예약조회', JSON.stringify(회원목록));//가져오기
+    회원목록 = JSON.parse(localStorage.getItem('예약조회'));//가져오기
 
     let firstName = document.querySelector('#firstName').value;
     let secondName = document.querySelector('#secondName').value;

@@ -1,0 +1,71 @@
+#제목 {
+    display: flex;
+    border-bottom: 1px solid#b3afab;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+#center {
+    height: 500px;
+    width: 100%;
+    background-color: #f8f7f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#center>div {
+    width: 600px;
+    text-align: center;
+}
+
+#center>div>h3 {
+    margin: 30px;
+}
+
+#제목>div {
+    margin: 10px;
+}
+
+#center>div>div {
+    margin: 10px;
+}
+
+#result {
+    border-bottom: 1px solid#b3afab;
+    padding: 15px;
+}
+
+/*================================================= */
+
+#onlineSer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+}
+
+#onlineSer>div {
+    margin: 30px;
+}
+
+#onlineSer>h1 {
+    font-size: 20px;
+}
+
+#btn>button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
