@@ -17,12 +17,62 @@
 
 <body>
     <header></header>
-    <div id="productFilter">
 
-    </div>
-    <div id="productPrint">
 
+    <h1>상품 필터</h1>
+    <div>
+        <h3>카테고리</h3>
+        <label>
+            <input type="checkbox" name="category" value="Sunglasses">
+            Sunglasses
+        </label>
+        <label>
+            <input type="checkbox" name="category" value="Glasses">
+            Glasses
+        </label>
     </div>
+    <div>
+        <h3>프레임 색상</h3>
+        <!-- 모든 색상 필터 추가 -->
+        <label>
+            <input type="checkbox" name="frameColor" value="White">
+            White
+        </label>
+        <label>
+            <input type="checkbox" name="frameColor" value="Black">
+            Black
+        </label>
+        <label>
+            <input type="checkbox" name="frameColor" value="Pink">
+            Pink
+        </label>
+    </div>
+    <!-- 
+    const frameColors = ["White", "Black", "Pink", "Grey", "Red", "Brown", "Clear", "Green", "Gold", "Blue", "Silver", "Yellow", "Other"];
+    const materials = ["Acetate", "Metal", "Combination"];
+    -->
+    <div>
+        <h3>재질</h3>
+        <!-- 모든 재질 필터 추가 -->
+        <label>
+            <input type="checkbox" name="material" value="Acetate">
+            Acetate
+        </label>
+        <label>
+            <input type="checkbox" name="material" value="Metal">
+            Metal
+        </label>
+    </div>
+    <div>
+        <h3>가격대</h3>
+        <input type="range" id="price-range" min="0" max="1000000" step="10000" value="1000000">
+        <span id="price-range-value">1000000</span>
+    </div>
+    <div id="product-list">
+        <!-- 상품 목록 -->
+    </div>
+
+
     <footer></footer>
 </body>
 
