@@ -48,11 +48,11 @@ function _submit(){ console.log('_submit()');
 
     // 공백 체크 
 
-    let sex = document.querySelector('#sex').value;     console.log(sex);
+    let gender = document.querySelector('#gender').value;     console.log(gender);
     let name = document.querySelector('#name').value;     console.log(name);
     let email = document.querySelector('#email').value;     console.log(email);
 
-    if(sex == ''){
+    if(gender == ''){
         alert('성별을 입력해주세요.')
         return;
     }
