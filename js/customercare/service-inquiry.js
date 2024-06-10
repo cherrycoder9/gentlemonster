@@ -1,6 +1,7 @@
 let inquiryList = [];
 
 let loginMemberId = sessionStorage.getItem('loginMemberId');  console.log(loginMemberId);
+
 // 2. 없으면
 if( loginMemberId == null ){
 alert('로그인 후 글쓰기가 가능합니다.');
@@ -14,7 +15,11 @@ function _submit(){ console.log('_submit()');
     memberList = JSON.parse(localStorage.getItem('memberList'));
     if(memberList==null){memberList=[]};
 
-    let inquiryNum = inquiryList[inquiryList.length-1].inquiryNum+1;    console.log(inquiryNum);
+    inquiryList = JSON.parse(localStorage.getItem('inquiryList'));
+    if(inquiryList==null){inquiryList=[]};
+
+    let inquiryNum = 0;
+    inquiryNum = inquiryList.length == 0 ? 1: inquiryList[inquiryList.length-1].inquiryNum+1;
     let subject = document.querySelector('#subject').value;             console.log(subject);
     let title = document.querySelector('#title').value;             console.log(title);
     let msg = document.querySelector('#msg').value;             console.log(msg);
@@ -28,10 +33,12 @@ function _submit(){ console.log('_submit()');
 
 
     let memberId = 0;
+    let memberIndex = 0;
 
     for(let i = 0 ; i < memberList.length ; i++){
         if(loginMemberId == memberList[i].memberId){
             memberId = loginMemberId;
+            memberIndex = i;
             break;
         }
     }
@@ -43,7 +50,8 @@ function _submit(){ console.log('_submit()');
         title : title , 
         msg : msg , 
         date : date , 
-        memberId : memberId
+        memberId : memberId , 
+        state : 'X'
     };
 
     // 공백 체크 
@@ -85,14 +93,17 @@ function _submit(){ console.log('_submit()');
         alert('위 박스 모두 체크해주세요.');
         return;
     }
-
+    if( email != memberList[memberIndex].email ){
+        alert('입력하신 이메일이 다릅니다.');
+        return;
+    }
     inquiryList.push(inquiry);                  console.log(inquiryList);
 
     localStorage.setItem('inquiryList' , JSON.stringify(inquiryList));
     
     alert('이메일문의 등록 완료');
 
-    // location.href="../index.html";
+    location.href="../index.html";
 }
 
 function 자릿수변환(변환할값){  

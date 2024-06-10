@@ -1,12 +1,3 @@
-/*
-let loginMemberId = sessionStorage.getItem('loginMemberId');  console.log(loginMemberId);
-// 2. 없으면
-if( loginMemberId != 1 ){
-alert('관리자만 볼 수 있는 페이지 입니다.');
-location.href="../index.html";
-}
-*/
-
 let inquiryList = [];       
 
 let memberList = [];        
@@ -29,32 +20,53 @@ function _inquiry(){    console.log('_inquiry()');
     let html = ``;                  console.log(html);
 
     let findId = -1;                console.log(findId);
+    let findIq = -1;
 
-    for( let i = 0 ; i < memberList.length ; i++ ){
-        for(let j = 0 ; j < inquiryList.length ; j++ ){
-            if( memberList[i].memberId == inquiryList[j].memberId ){
-                findId = i; 
-                break;
+    for( let i = 0 ; i < inquiryList.length ; i++ ){
+        for(let j = 0 ; j < memberList.length ; j++ ){
+            if( inquiryList[i].memberId == memberList[j].memberId){
+                findId = j; 
+                findIq = i;
             }
         }
-    }       
-    console.log(findId);
-    
-    for(let i = 0 ; i < inquiryList.length ; i++){
         html +=`
                     <tr>
-                        <td> ${inquiryList[i].inquiryNum} </td>
+                        <td> ${inquiryList[findIq].inquiryNum} </td>
                         <td> ${memberList[findId].gender} </td>
                         <td> ${memberList[findId].name} </td>
                         <td> ${memberList[findId].email} </td>
-                        <td> ${inquiryList[i].subject} </td>
-                        <td> ${inquiryList[i].title} </td>
-                        <td> 2024-06-10 </td>
+                        <td> ${inquiryList[findIq].subject} </td>
+                        <td><a href="inquiry-view.html?no=${inquiryList[findIq].inquiryNum}"> ${inquiryList[findIq].title} </a> </td>
+                        <td> ${inquiryList[findIq].date} </td>
+                        <td>${inquiryList[findIq].state}</td>
+                        <td><button onclick="_change(${findIq})" type=button""> 완료</button></td>
+                        <td><button onclick="_delete(${findIq})" type=button""> 삭제</button></td>
                     </tr>
         `;
-    }
+    }       
+
+    console.log(findId);
+    console.log(findIq);
 
     // 출력
     inquiryBox.innerHTML = html;
 }
-    
+function _change(findIq){ console.log(findIq);
+    if(inquiryList[findIq].state == 'X'){
+        inquiryList[findIq].state = 'O'
+    }else{
+        inquiryList[findIq].state = 'X'
+    }                                           console.log(inquiryList);
+    // 새로운 데이터를 배열에 저장했으면 localStorage 다시 저장한다.
+    localStorage.setItem('inquiryList' , JSON.stringify( inquiryList ));
+
+    _inquiry();
+}
+function _delete(findIq){ console.log('_delete()');
+    inquiryList.splice(findIq , 1);
+
+    // 새로운 데이터를 배열에 저장했으면 localStorage 다시 저장한다.
+    localStorage.setItem('inquiryList' , JSON.stringify( inquiryList ));
+
+    _inquiry();
+}

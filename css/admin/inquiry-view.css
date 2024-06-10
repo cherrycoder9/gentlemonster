@@ -28,28 +28,19 @@
 #content h2 {
     margin-bottom: 30px;
 }
-
-.contentBox {
-    padding-bottom: 44px;
-    border-bottom: 1px solid #ebebeb;
-    margin-bottom: 24px;
-}
-
-.contentBox>p {
-    margin-bottom: 22px;
-}
-
-.contentBox>.contentBtn {
-    display: flex;
-}
-
-.contentBtn>button {
-    margin-right: 10px;
-}
 #currentPage{
     font-weight: bold;
     text-decoration: underline;
 }
-.notUse{
-    text-decoration: line-through;
+.contentBox{
+    width: 440px; height: 85px;
+}
+.contentBox > p{
+    margin-bottom: 5px;
+}
+#buttons{
+    display: flex;
+}
+#content #buttons> button{
+    margin-right: 20px;
 }

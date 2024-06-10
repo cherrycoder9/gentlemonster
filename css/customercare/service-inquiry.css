@@ -54,3 +54,6 @@
 #checkBox > button{
     margin-top: 40px;
 }
+.notUse{
+    text-decoration: line-through;
+}
