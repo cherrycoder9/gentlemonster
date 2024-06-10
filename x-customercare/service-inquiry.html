@@ -34,12 +34,12 @@
             </ul>
         </div>
         <div id="content">
-            <h2> 게시판문의 </h2>
+            <h2> 이메일문의 </h2>
             <div id="mainContnet">자세한 문의 내용과 연락처를 남겨주시면 빠른 시일 내에 연락드리겠습니다.</div>
             <div>
                 <div class="contentBox">
                     <p>성별</p>
-                    <select>
+                    <select id="sex">
                         <option value selected disabled style="display: none;"> 성별 </option>
                         <option> 남성 </option>
                         <option> 여성 </option>
@@ -47,15 +47,15 @@
                 </div>
                 <div class="contentBox">
                     <p>이름</p>
-                    <input class="textType" type="text" />
+                    <input id="name" class="textType" type="text" />
                 </div>
                 <div class="contentBox">
                     <p>이메일</p>
-                    <input class="textType" type="text" />
+                    <input id="email" class="textType" type="text" />
                 </div>
                 <div class="contentBox">
                     <p> 주제 </p>
-                    <select>
+                    <select id="subject">
                         <option value selected disabled style="display: none;"> 주제 선택 </option>
                         <option> 제품 </option>
                         <option> 배송 </option>
@@ -67,20 +67,17 @@
                 </div>
                 <div class="contentBox">
                     <p> 제목 </p>
-                    <input class="textType" type="text" />
+                    <input id="title" class="textType" type="text" />
                 </div>
                 <div class="contentBox2">
                     <p> 메시지 </p>
-                    <textarea placeholder="메시지를 입력해주세요"></textarea> <br/>
+                    <textarea id="msg" placeholder="메시지를 입력해주세요"></textarea> <br/>
                 </div>
                 <div id="checkBox">
-                    <input type="checkbox" /> 전체 동의<br/>
-                    <input type="checkbox" /> [필수] 만 14세 이상입니다<br/>
-                    <input type="checkbox" /> [필수] 이용약관 동의<br/>
-                    <input type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br/>
-                    <input type="checkbox" /> [선택] 개인정보 수집 및 이용 동의<br/>
-                    <input type="checkbox" /> [선택] 마케팅 정보 수신 및 활용 동의<br/>
-                    <button type="button"> 게시판 등록하기 </button>
+                    <input class="checkBoxes" type="checkbox" /> [필수] 만 14세 이상입니다<br/>
+                    <input class="checkBoxes" type="checkbox" /> [필수] 이용약관 동의<br/>
+                    <input class="checkBoxes" type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br/>
+                    <button onclick="_submit()" type="button"> 게시판 등록하기 </button>
                 </div>
             </div>
             
