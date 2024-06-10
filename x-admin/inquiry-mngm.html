@@ -7,8 +7,8 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/admin/inquiry-mngm.css'>
+
     <script src='../js/common/header.js' defer></script>
     <script src='../js/common/footer.js' defer></script>
 </head>
@@ -17,7 +17,38 @@
 <body>
     <header></header>
 
+    <div id="wrap">
+        <div id="sideMenu">
+            <h2> 관리자 페이지 </h2>
+            <ul>
+                <li> <a href="user-mngm.html"> 회원관리 </a> </li>
+                <li> <a href="inquiry-mngm.html"> 문의관리 </a> </li>
+                <li> <a href="user-mngm.html"> 수리예약서비스관리 </a> </li>
+            </ul>
+        </div>
+        <div id="content">
+            <table>
+                <thead>
+                    <tr id="underline">
+                        <th> 번호 </th>
+                        <th> 성별 </th>
+                        <th> 작성자 </th>
+                        <th> 이메일 </th>
+                        <th> 주제 </th>
+                        <th> 제목 </th>
+                        <th> 답변 완료일 </th>
+                    </tr>
+                </thead>
+
+                <tbody id="inquiryBox">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
     <footer></footer>
+
+    <script src='../js/admin/inquiry-mngm.js'></script>
 </body>
 
 </html>
