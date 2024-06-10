@@ -112,29 +112,11 @@ function renderProductList() {
     });
 }
 
-const showSunglasses = document.querySelector('#showSunglasses');
-const showGlasses = document.querySelector('#showGlasses');
-const showAcetate = document.querySelector('#showAcetate');
-const showMetal = document.querySelector('#showMetal');
-const showCombination = document.querySelector('#showCombination');
-// 프레임 칼라 분류 
-// "White", "Black", "Pink", "Grey", "Red", "Brown", 
-// "Clear", "Green", "Gold", "Blue", "Silver", "Yellow", "Other"
-const showWhite = document.querySelector('#showWhite');
-const showBlack = document.querySelector('#showBlack');
-const showPink = document.querySelector('#showPink');
-const showGrey = document.querySelector('#showGrey');
-const showRed = document.querySelector('#showRed');
-const showBrown = document.querySelector('#showBrown');
-const showClear = document.querySelector('#showClear');
-const showGreen = document.querySelector('#showGreen');
-const showGold = document.querySelector('#showGold');
-const showBlue = document.querySelector('#showBlue');
-const showSilver = document.querySelector('#showSilver');
-const showYellow = document.querySelector('#showYellow');
-const showOther = document.querySelector('#showOther');
 let checkStatus = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+const showSunglasses = document.querySelector('#showSunglasses');
+const showGlasses = document.querySelector('#showGlasses');
+// 카테고리
 showSunglasses.addEventListener('change', function () {
     if (showSunglasses.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
@@ -144,7 +126,7 @@ showSunglasses.addEventListener('change', function () {
         checkStatus[0] = 0;
     }
 });
-
+// 카테고리
 showGlasses.addEventListener('change', function () {
     if (showGlasses.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
@@ -152,5 +134,195 @@ showGlasses.addEventListener('change', function () {
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[1] = 0;
+    }
+});
+
+const showAcetate = document.querySelector('#showAcetate');
+const showMetal = document.querySelector('#showMetal');
+const showCombination = document.querySelector('#showCombination');
+// 재질 
+showAcetate.addEventListener('change', function () {
+    if (showAcetate.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[2] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[2] = 0;
+    }
+});
+// 재질 
+showMetal.addEventListener('change', function () {
+    if (showMetal.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[3] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[3] = 0;
+    }
+});
+// 재질 
+showCombination.addEventListener('change', function () {
+    if (showCombination.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[4] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[4] = 0;
+    }
+});
+
+const showWhite = document.querySelector('#showWhite');
+// 프레임 색상  
+showWhite.addEventListener('change', function () {
+    if (showWhite.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[5] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[5] = 0;
+    }
+});
+
+const showBlack = document.querySelector('#showBlack');
+// 프레임 색상  
+showBlack.addEventListener('change', function () {
+    if (showBlack.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showPink = document.querySelector('#showPink');
+// 프레임 색상  
+showPink.addEventListener('change', function () {
+    if (showPink.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showGrey = document.querySelector('#showGrey');
+// 프레임 색상  
+showGrey.addEventListener('change', function () {
+    if (showGrey.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showRed = document.querySelector('#showRed');
+// 프레임 색상  
+showRed.addEventListener('change', function () {
+    if (showRed.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showBrown = document.querySelector('#showBrown');
+// 프레임 색상  
+showBrown.addEventListener('change', function () {
+    if (showBrown.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showClear = document.querySelector('#showClear');
+// 프레임 색상  
+showClear.addEventListener('change', function () {
+    if (showClear.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showGreen = document.querySelector('#showGreen');
+// 프레임 색상  
+showGreen.addEventListener('change', function () {
+    if (showGreen.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showGold = document.querySelector('#showGold');
+// 프레임 색상  
+showGold.addEventListener('change', function () {
+    if (showGold.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showBlue = document.querySelector('#showBlue');
+// 프레임 색상  
+showBlue.addEventListener('change', function () {
+    if (showBlue.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showSilver = document.querySelector('#showSilver');
+// 프레임 색상  
+showSilver.addEventListener('change', function () {
+    if (showSilver.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showYellow = document.querySelector('#showYellow');
+// 프레임 색상  
+showYellow.addEventListener('change', function () {
+    if (showYellow.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
+    }
+});
+
+const showOther = document.querySelector('#showOther');
+// 프레임 색상  
+showOther.addEventListener('change', function () {
+    if (showOther.checked) {
+        // 체크박스가 체크되었을 때 실행할 코드
+        checkStatus[6] = 1;
+    } else {
+        // 체크박스가 체크 해제되었을 때 실행할 코드
+        checkStatus[6] = 0;
     }
 });
