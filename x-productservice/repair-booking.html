@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -6,16 +7,96 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> -->
-    <script src='./js/common/header.js' defer></script>
-    <script src='./js/common/footer.js' defer></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/product-service/repair-booking.css'>
+    <script src='../js/common/header.js' defer></script>
+    <script src='../js/common/footer.js' defer></script>
+    <script src="../js/repair/repair-booking.js"> </script>
 </head>
-<!-- 수리예약 접수 페이지 -->
+<!-- 메인페이지 -->
 
 <body>
-    <header></header>
+    <header>
+    </header>
+    <div id="top"></div>
+    <div>온라인 프로덕트 서비스</div>
+    <div id="content">
+        <div id="Lcontent">
+            <h5>이용안내</h5>
+            <div>원활한 접수 진행을 위하여 접수 전 아래의 내용을 확인 부탁드립니다.</div>
+            <ul>
+                <li>STEP 01. 서비스 신청</li>
+                <li>STEP 02. 접수 완료</li>
+                <li>STEP 03. 제품 수리</li>
+                <li>STEP 04. 제품 인도</li>
+                <li>STEP 01. 서비스 신청</li>
+            </ul>
+            <div>더 자세한 사항은 아래의 연락처를 통해 문의 바랍니다. <br>
+
+                ps@gentlemonster.com / +82 1600-2126 / 카카오 플러스 친구 (@gentlemonsterps)</div>
+        </div>
+        <div id="Rcontent">
+            <h5>온라인 프로덕트 서비스 접수</h5>
+            <div id="myInfo">
+                <h6>개인 정보를 입력해 주세요.</h6>
+                <input id="firstName" type="text" value="성"><input id="secondName" type="text" value="이름"><br>
+                <input type="text" value="연락처"><br>
+                <input type="text" value="이메일"><select name="대한민국" id=""></select><br>
+                <input type="text" value="우편번호"><button class="btnn">우편번호 검색</button>
+                <input type="text" value="기본주소"><br>
+                <input type="text" value="상세주소"><br>
+            </div>
+            <div id="product1">
+                <h6>제품 정보를 입력해 주세요.</h6>
+                <input type="text" value="모델 명을 입력해주세요.(필수항목)"><br>
+                <input type="text" value="구매처"><input type="text" value="구매시기"><br>
+                <div>보증서유무<button class="btnn">보증서 있음</button><button class="btnn">보증서 없음</button></div>
+            </div>
+            <div id="product2">
+                <div>멤버십유무<button class="btnn">멤버십 있음</button><button class="btnn">멤버십 없음</button></div>
+                <h6>제품 정보를 입력해 주세요.</h6>
+                <textarea rows="10" cols="80"></textarea>
+            </div>
+            <div id="product3">
+                <h6>수리 서비스 안내사항</h6>
+                <div id="texts">
+                    <h6>프로덕트 서비스 보증</h6>
+                    <div>- 젠틀몬스터는 구매일로부터 24개월간 제품에 대한 수리 및 케어 서비스를 보증합니다.</div>
+                    <div>- 보증기간 경과 후에도 제품 서비스를 요청하실 수 있으나, 제품 현상에 따라서 일부 서비스는 제한 될 수 있습니다.</div>
+                    <h6>품질 보증</h6>
+                    <div>- 젠틀몬스터는 구매일로부터 24개월간 품질 보증을 제공합니다.</div>
+                    <div>- 품질보증기간은 제품에 발생한 제조상의 결함, 하자에 대해 무상수리를 보증하는 기간으로, 보증 적용을 위해 프로덕트</div>
+                    <div>서비스팀을 통해 결함을 확인하는 과정이 필요할 수 있습니다.</div>
+
+                    <h6>보증서</h6>
+                    <div>- 보증서 또는 구매 확인 서류가 없는 경우에는 보증기간이 적용되지 않습니다.</div>
+
+                    <h6>진행 안내</h6>
+                    <div>- 프로덕트 서비스팀으로 입고된 순서대로 제품에 대한 서비스 판정이 진행됩니다.</div>
+                    <div>- 서비스 진행 안내(수리 내용, 비용, 기간, 출고예정일 등)는 접수 시 작성해주신 연락처로 카카오톡을 통하여 발송됩니다.</div>
+                    <div>문자 또는 이메일 안내가 필요하신 경우 접수 시‘서비스 요청사항’에 기재해 주세요.</div>
+
+                    <h6>제품 보관 기간</h6>
+                    <div>- 유상 수리건의 경우 안내 드린 수리 완료일로부터 90일 동안 프로덕트 서비스팀에서 보관합니다. 해당 기간 이내 수리 비용 결제</div>
+                    <div>확인이 되지 않을 경우 제품은 폐기될 수 있습니다.</div>
+                </div>
+                <input type="checkbox" />전체 동의<br />
+                <input type="checkbox" />[필수] 만 14세 이상입니다<br />
+                <input type="checkbox" />[필수] 개인정보 수집 및 이용 동의<br />
+                <input type="checkbox" />[선택] 마케팅 정보 수신 및 활용 동의
+            </div>
+            <button id="접수하기" type="button" onclick="접수()">접수하기</button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
 
     <footer></footer>
 </body>
