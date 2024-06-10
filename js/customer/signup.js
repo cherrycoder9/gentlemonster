@@ -109,11 +109,3 @@ function registerMember() {
     };
     setMemberList(newMember);
 }
-
-//     {
-//         memberId: 1,
-//         email: "didwodus1234@gmail.com",
-//         password: "123456",
-//         gender: "Female",
-//         name: "Yang Jaeyeon",
-//     },

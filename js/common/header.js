@@ -88,9 +88,9 @@ function loadHeader() {
 
     let sessionCheck = document.querySelector('#sessionCheck');
     if (sessionStorage.getItem('loginMemberId')) {
-        sessionCheck.innerHTML = '<a href="./x-customer/user-info.html">회원정보</a>';
+        sessionCheck.innerHTML = '<a href="../../x-customer/user-info.html">회원정보</a>';
     } else {
-        sessionCheck.innerHTML = '<a href="./x-customer/login.html">로그인</a>';
+        sessionCheck.innerHTML = '<a href="../../x-customer/login.html">로그인</a>';
     }
 
     console.log('loadHeader() 함수 종료');

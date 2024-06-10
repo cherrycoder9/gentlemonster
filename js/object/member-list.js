@@ -13,10 +13,35 @@ function getMemberList() {
     console.log(`getMemberList() 함수 종료`);
 }
 
+function removeMemberList(sIndex) {
+    memberList.splice(memberList[sIndex], 1);
+    removeSessionInfo();
+    setMemberList();
+}
+
 function setMemberList(newMember) {
     console.log(`setMemberList() 함수 진입`);
-    memberList.push(newMember); // JS 메모리에 추가 
+    console.log('newMember', newMember);
+    if (newMember != null) {
+        memberList.push(newMember); // JS 메모리에 추가 
+    }
     localStorage.setItem('memberList', JSON.stringify(memberList)); // 로컬 업데이트
     getMemberList(); // JS 메모리 갱신
     console.log(`setMemberList() 함수 종료`);
+}
+
+function getSessionInfo() {
+    let id = sessionStorage.getItem('loginMemberId');
+    let index = sessionStorage.getItem('loginMemberIndex');
+    return [id, index];
+}
+
+function setSessionInfo(id, index) {
+    sessionStorage.setItem('loginMemberId', id);
+    sessionStorage.setItem('loginMemberIndex', index);
+}
+
+function removeSessionInfo() {
+    sessionStorage.removeItem('loginMemberId');
+    sessionStorage.removeItem('loginMemberIndex');
 }

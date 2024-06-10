@@ -7,8 +7,9 @@
     <title>GENTLE MONSTER Official Site</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/customer/user-info.css'>
+    <script src='../js/object/member-list.js'></script>
+    <script src='../js/customer/user-info.js' defer></script>
     <script src='../js/common/header.js' defer></script>
     <script src='../js/common/footer.js' defer></script>
 </head>
@@ -16,7 +17,30 @@
 
 <body>
     <header></header>
-    <h3>회원정보 페이지</h3>
+    <div class="userInfoLayout">
+        <form>
+            <h3 class="font-size-19">회원정보</h3>
+            <div>
+                <label for="memberIdInfo">회원번호</label>
+                <input type="text" id="memberIdInfo" disabled />
+            </div>
+            <div>
+                <label for="emailInfo">이메일</label>
+                <input type="email" id="emailInfo" autocomplete="email" disabled />
+            </div>
+            <div>
+                <label for="nameInfo">이름</label>
+                <input type="text" id="nameInfo" autocomplete="given-name" disabled />
+            </div>
+            <div>
+                <label for="genderInfo">성별</label>
+                <input type="text" id="genderInfo" autocomplete="sex" disabled />
+            </div>
+            <button id="btnUpdateProfile" type="button" onclick="updateProfile()">수정하기</button>
+            <button id="btnDeleteAccount" type="button" onclick="deleteAccount()">탈퇴하기</button>
+            <button id="btnLogout" type="button" onclick="logout()">로그아웃</button>
+        </form>
+    </div>
     <footer></footer>
 </body>
 
