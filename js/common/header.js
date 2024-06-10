@@ -14,8 +14,7 @@ function loadHeader() {
         </div>
         <div id="mainMenu">
             <ul>
-                <li><a href="./x-customer/sunglasses.html">선글라스</a></li>
-                <li><a href="./x-customer/glasses.html">안경</a></li>
+                <li><a href="./x-customer/product.html">제품보기</a></li>
                 <li><a href="#"><s>콜라보레이션</s></a></li>
                 <li><a href="#"><s>스타일</s></a></li>
                 <li><a href="#"><s>브랜드이슈</s></a></li>
@@ -54,8 +53,7 @@ function loadHeader() {
         </div>
         <div id="mainMenu">
             <ul>
-                <li><a href="../x-customer/sunglasses.html">선글라스</a></li>
-                <li><a href="../x-customer/glasses.html">안경</a></li>
+                <li><a href="../x-customer/product.html">제품보기</a></li>
                 <li><a href="#"><s>콜라보레이션</s></a></li>
                 <li><a href="#"><s>스타일</s></a></li>
                 <li><a href="#"><s>브랜드이슈</s></a></li>

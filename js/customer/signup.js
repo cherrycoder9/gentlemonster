@@ -3,6 +3,10 @@ if (sessionStorage.getItem('loginMemberId')) {
     window.location.href = '../../index.html';
 }
 
+if (memberList == '') {
+    alert('admin@gm.com 으로 가입하면 회원정보에서 관리자페이지에 접근할 수 있습니다.');
+}
+
 function handleSignupClick() {
     console.log(`handleSignupClick() 함수 진입`);
 
@@ -96,6 +100,7 @@ function registerMember() {
     const signupPassword = document.querySelector('#signupPassword').value;
     const signupGender = document.querySelector('#signupGender').value;
     const signupName = document.querySelector('#signupName').value;
+    const isAdmin = signupEmail == 'admin@gm.com' ? true : false;
     let newMemberId = 1;
     if (memberList.length > 0) {
         newMemberId = memberList[memberList.length - 1].memberId + 1;
@@ -106,6 +111,7 @@ function registerMember() {
         password: signupPassword,
         gender: signupGender,
         name: signupName,
+        isAdmin: isAdmin,
     };
     setMemberList(newMember);
 }
