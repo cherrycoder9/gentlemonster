@@ -22,11 +22,11 @@
             <h3 class="font-size-19">신규 회원가입</h3>
             <div>
                 <label for="signupEmail">이메일 주소</label>
-                <input type="email" id="signupEmail" autocomplete="username" />
+                <input type="email" id="signupEmail" autocomplete="email" />
             </div>
             <div>
                 <label for="signupEmailCheck">이메일 주소 확인</label>
-                <input type="email" id="signupEmailCheck" autocomplete="username" />
+                <input type="email" id="signupEmailCheck" autocomplete="email" />
             </div>
             <div>
                 <label for="signupPassword">비밀번호</label>
@@ -40,13 +40,13 @@
                 <label for="signupGender">성별</label>
                 <select id="signupGender">
                     <option value="" disabled selected>성별을 선택해 주세요</option>
-                    <option value="male">남자</option>
-                    <option value="female">여자</option>
+                    <option value="남자">남자</option>
+                    <option value="여자">여자</option>
                 </select>
             </div>
             <div>
                 <label for="signupName">이름</label>
-                <input type="text" id="signupName" autocomplete="username" />
+                <input type="text" id="signupName" autocomplete="given-name" />
             </div>
             <button type="button" onclick="handleSignupClick()">계정생성</button>
         </form>

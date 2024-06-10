@@ -41,3 +41,9 @@
     margin-top: 20px;
     align-self: center;
 }
+
+.userInfoLayout>form>button:disabled {
+    background-color: white;
+    cursor: default;
+    display: none;
+}

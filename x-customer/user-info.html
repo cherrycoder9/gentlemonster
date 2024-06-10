@@ -8,7 +8,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/customer/user-info.css'>
-    <script src=' ../js/common/header.js' defer></script>
+    <script src='../js/object/member-list.js'></script>
+    <script src='../js/customer/user-info.js' defer></script>
+    <script src='../js/common/header.js' defer></script>
     <script src='../js/common/footer.js' defer></script>
 </head>
 <!-- 회원정보 페이지 -->
@@ -19,22 +21,24 @@
         <form>
             <h3 class="font-size-19">회원정보</h3>
             <div>
-                <label for="loginEmail">이메일</label>
-                <input type="email" id="loginEmail" autocomplete="username" />
+                <label for="memberIdInfo">회원번호</label>
+                <input type="text" id="memberIdInfo" disabled />
             </div>
             <div>
-                <label for="loginPassword">비밀번호</label>
-                <input type="password" id="loginPassword" autocomplete="current-password" />
+                <label for="emailInfo">이메일</label>
+                <input type="email" id="emailInfo" autocomplete="email" disabled />
             </div>
-            <button type="button" onclick="handleLoginClick()">로그인</button>
-        </form>
-
-        <form>
-            <h3 class="font-size-19">회원가입</h3>
             <div>
-                <p>회원가입을 하시면, 주문 조회와 개인정보 관리 및 위시리스트 확인 등 다양한 혜택을 누리실 수 있습니다.</p>
+                <label for="nameInfo">이름</label>
+                <input type="text" id="nameInfo" autocomplete="given-name" disabled />
             </div>
-            <button type="button" onclick="redirectSignUp()">신규가입</button>
+            <div>
+                <label for="genderInfo">성별</label>
+                <input type="text" id="genderInfo" autocomplete="sex" disabled />
+            </div>
+            <button id="btnUpdateProfile" type="button" onclick="updateProfile()">수정하기</button>
+            <button id="btnDeleteAccount" type="button" onclick="deleteAccount()">탈퇴하기</button>
+            <button id="btnLogout" type="button" onclick="logout()">로그아웃</button>
         </form>
     </div>
     <footer></footer>

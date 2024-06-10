@@ -32,8 +32,7 @@ function isExistingMember() {
     for (let i = 0; i < memberList.length; i++) {
         if (memberList[i].email == loginEmail) {
             // 이메일이 등록되어 있으면 세션페이지에 i인덱스랑 memberId 등록
-            sessionStorage.setItem('loginMemberId', memberList[i].memberId);
-            sessionStorage.setItem('loginArrayIndex', i);
+            setSessionInfo(memberList[i].memberId, i);
             return true;
         }
     }
