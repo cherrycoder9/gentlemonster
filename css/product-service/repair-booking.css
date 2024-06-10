@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#top {
+    height: 200px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+}
+
+#Rcontent {
+    width: 600px;
+}
+
+#myInfo,
+#product1,
+#product2,
+#product3 {
+    margin: 20px;
+}
+
+.btnn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    height: 20px;
+}
