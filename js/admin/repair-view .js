@@ -68,5 +68,5 @@ function _inquiryPrint() {
     repairBox.innerHTML = html;
 }
 function _move() {
-    location.href = "../x-admin/inquiry-mngm.html";
+    location.href = "../x-admin/booking-mngm.html";
 }
