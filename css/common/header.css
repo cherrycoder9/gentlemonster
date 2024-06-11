@@ -69,11 +69,13 @@ header ul {
     font-weight: bold;
 }
 
-.indexPage #logo a {
+.indexPage #logo a,
+.indexPage span {
     color: white;
 }
 
-.otherPage #logo a {
+.otherPage #logo a,
+.otherPage span {
     color: black;
 }
 
@@ -108,4 +110,17 @@ header ul {
     font-size: 30px;
     cursor: default;
     user-select: none;
+}
+
+#utilMenu>ul>li:last-child {
+    position: relative;
+}
+
+#cartCnt {
+    position: absolute;
+    top: 13%;
+    right: 13%;
+    font-size: 10px;
+    user-select: none;
+    font-weight: bold;
 }

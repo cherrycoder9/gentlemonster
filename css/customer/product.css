@@ -1,7 +1,7 @@
 #productFilter {
     display: flex;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     justify-content: center;
     height: 240px;
 }
@@ -71,4 +71,11 @@
 #addCart:hover {
     background-color: bisque;
     border-radius: 20px;
+}
+
+#countProduct {
+    display: flex;
+    align-self: center;
+    margin-bottom: 20px;
+    font-size: 15px;
 }

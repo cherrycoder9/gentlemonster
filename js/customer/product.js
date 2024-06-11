@@ -35,6 +35,7 @@ let blueList = [];
 let silverList = [];
 let yellowList = [];
 let otherList = [];
+let cartList = [];
 
 preloadProducts();
 function preloadProducts() {
@@ -89,43 +90,159 @@ function preloadProducts() {
     }
 }
 
-renderProductList();
 function renderProductList() {
     console.log(`renderProductList() 함수 진입`);
 
     let selectedCategoryProduct = [];
     let selectedMaterialProduct = [];
     let selectedFrameColorProduct = [];
-    let showSelectedProductList = [];
 
     console.log(`selectedCategoryProduct`, selectedCategoryProduct);
-    console.log(`selectedCategoryProduct.length`, selectedCategoryProduct.length);
-    console.log(`showSelectedProductList.length`, showSelectedProductList.length);
 
+    // 카테고리 
+    if (checkStatus[0]) {
+        selectedCategoryProduct = Array.from(new Set(
+            [...selectedCategoryProduct, ...sunglassesList]));
+    }
+    if (checkStatus[1]) {
+        selectedCategoryProduct = Array.from(new Set(
+            [...selectedCategoryProduct, ...glassesList]));
+    }
 
+    // 재질
+    if (checkStatus[2]) {
+        selectedMaterialProduct = Array.from(new Set(
+            [...selectedMaterialProduct, ...acetateList]));
+    }
+    if (checkStatus[3]) {
+        selectedMaterialProduct = Array.from(new Set(
+            [...selectedMaterialProduct, ...metalList]));
+    }
+    if (checkStatus[4]) {
+        selectedMaterialProduct = Array.from(new Set(
+            [...selectedMaterialProduct, ...combinationList]));
+    }
 
+    // 프레임칼라
+    if (checkStatus[5]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...whiteList]));
+    }
+    if (checkStatus[6]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...blackList]));
+    }
+    if (checkStatus[7]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...pinkList]));
+    }
+    if (checkStatus[8]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...greyList]));
+    }
+    if (checkStatus[9]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...redList]));
+    }
+    if (checkStatus[10]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...brownList]));
+    }
+    if (checkStatus[11]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...clearList]));
+    }
+    if (checkStatus[12]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...greenList]));
+    }
+    if (checkStatus[13]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...goldList]));
+    }
+    if (checkStatus[14]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...blueList]));
+    }
+    if (checkStatus[15]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...silverList]));
+    }
+    if (checkStatus[16]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...yellowList]));
+    }
+    if (checkStatus[17]) {
+        selectedFrameColorProduct = Array.from(new Set(
+            [...selectedFrameColorProduct, ...otherList]));
+    }
 
+    let showSelectedProductList;
 
-    let initProductList = '';
-    for (let i = 0; i < productList.length; i++) {
-        initProductList += `
+    if (selectedFrameColorProduct.length == 0 && selectedMaterialProduct.length == 0 && selectedCategoryProduct.length == 0) {
+        // 모든 배열이 비어 있는 경우 빈 배열 반환
+        showSelectedProductList = [];
+    } else if (selectedFrameColorProduct.length == 0 && selectedMaterialProduct.length == 0) {
+        // frameColor와 material이 비어 있는 경우 category만 사용
+        showSelectedProductList = selectedCategoryProduct;
+    } else if (selectedFrameColorProduct.length == 0 && selectedCategoryProduct.length == 0) {
+        // frameColor와 category가 비어 있는 경우 material만 사용
+        showSelectedProductList = selectedMaterialProduct;
+    } else if (selectedMaterialProduct.length == 0 && selectedCategoryProduct.length == 0) {
+        // material과 category가 비어 있는 경우 frameColor만 사용
+        showSelectedProductList = selectedFrameColorProduct;
+    } else if (selectedFrameColorProduct.length == 0) {
+        // frameColor가 비어 있는 경우 material과 category의 교집합 사용
+        showSelectedProductList = selectedMaterialProduct.filter(item =>
+            selectedCategoryProduct.includes(item)
+        );
+    } else if (selectedMaterialProduct.length == 0) {
+        // material이 비어 있는 경우 frameColor와 category의 교집합 사용
+        showSelectedProductList = selectedFrameColorProduct.filter(item =>
+            selectedCategoryProduct.includes(item)
+        );
+    } else if (selectedCategoryProduct.length == 0) {
+        // category가 비어 있는 경우 frameColor와 material의 교집합 사용
+        showSelectedProductList = selectedFrameColorProduct.filter(item =>
+            selectedMaterialProduct.includes(item)
+        );
+    } else {
+        // 모든 배열이 비어 있지 않은 경우 세 배열의 교집합 사용
+        showSelectedProductList = selectedFrameColorProduct.filter(item =>
+            selectedMaterialProduct.includes(item) && selectedCategoryProduct.includes(item)
+        );
+    }
+
+    let showProductList = '';
+    for (let i = 0; i < showSelectedProductList.length; i++) {
+        let realIndex = showSelectedProductList[i];
+        showProductList += `
             <div class="productInfo">
-                <img src="${productList[i].imageUrl}" />
+                <img src="${productList[realIndex].imageUrl}" />
                 <div>
-                    <h2>${productList[i].modelName}</h2>
-                    <img id="addCart" src="../../img/icon/add-icon.svg" />
-                    <h3>&#8361;${productList[i].price.toLocaleString()}</h3>
-                    <p>${productList[i].description}</p>
+                    <h2>${productList[realIndex].modelName}</h2>
+                    <img id="addCart" onclick="addCart(${realIndex})" src="../../img/icon/add-icon.svg" />
+                    <h3>&#8361;${productList[realIndex].price.toLocaleString()}</h3>
+                    <p>${productList[realIndex].description}</p>
                 </div>
             </div>
         `;
     }
-    document.querySelector('#filteredProductList').innerHTML = initProductList;
-    const products = document.querySelectorAll('.productInfo');
-    products.forEach(product => {
-        product.style.display = 'none';
-    });
+    document.querySelector('#filteredProductList').innerHTML = showProductList;
+    document.querySelector('#countProduct').innerHTML = `${showSelectedProductList.length}개의 상품을 찾았습니다.`;
     console.log(`renderProductList() 함수 종료`);
+}
+
+function addCart(i) {
+    let count = sessionStorage.getItem('myCart');
+    if (!sessionStorage.getItem('myCart')) {
+        count = 0;
+        sessionStorage.setItem('myCart', count);
+    }
+    count++;
+    console.log(count);
+    sessionStorage.setItem('myCart', count);
+    loadHeader();
 }
 
 let checkStatus = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];

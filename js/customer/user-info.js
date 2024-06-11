@@ -72,6 +72,7 @@ function deleteAccount() {
 function logout() {
     console.log(`logout() 함수 진입`);
     removeSessionInfo();
+    sessionStorage.removeItem('myCart');
     window.location.href = '../../index.html';
     console.log(`logout() 함수 종료`);
 }

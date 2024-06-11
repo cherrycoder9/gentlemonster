@@ -3,6 +3,10 @@ function loadHeader() {
     console.log('loadHeader() 함수 진입');
     let headerHTML = '';
     let currentPath = window.location.pathname;
+    let count = sessionStorage.getItem('myCart');
+    if (count == '' || count == null) {
+        count = ' ';
+    }
 
     console.log(currentPath);
     if (currentPath.endsWith("/index.html") || currentPath == "/" || currentPath == "") {
@@ -26,7 +30,8 @@ function loadHeader() {
             <ul>
                 <li><a href="#"><img id="searchSvg" src="#"></img></a></li>
                 <li id="sessionCheck"></li>
-                <li><a href="#"><img id="cartSvg" src="#"></img></a></li>
+                <li><a href="#"><img id="cartSvg" src="#"></img></a><span id="cartCnt">${count}</span></li>
+
             </ul>
         </div>
     `;
@@ -65,7 +70,7 @@ function loadHeader() {
             <ul>
                 <li><a href="#"><img id="searchSvg" src="#"></img></a></li>
                 <li id="sessionCheck"></li>
-                <li><a href="#"><img id="cartSvg" src="#"></img></a></li>
+                <li><a href="#"><img id="cartSvg" src="#"></img></a><span id="cartCnt">${count}</span></li>
             </ul>
         </div>
     `;
