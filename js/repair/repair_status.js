@@ -11,12 +11,13 @@ function 확인() {
 
     // 1. 어디에
     let result = document.querySelector('#result');
-    console.log(firstName);
     // 2. 무엇을
     let html = '';
     for (let i = 0; i < memberList.length; i++) {
+        console.log(memberList[i].성);
+        console.log(memberList[i].이름);
+        console.log(memberList[i].메일);
         if (firstName == memberList[i].성) {
-            console.log(html);
             html += ` <div> 
                     ${memberList[i].성}
                     ${memberList[i].이름}
