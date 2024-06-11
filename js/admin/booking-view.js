@@ -55,7 +55,7 @@ function _repairPrint() {
                     </div>
                     <div class="contentBox">
                         <p>내용</p>
-                        <div>${repairList[findIndex].content}</div>
+                        <div>${repairList[findIndex].msg}</div>
                     </div>
                     <div class="contentBox">
                         <p>작성일</p>
