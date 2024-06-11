@@ -40,17 +40,16 @@
                 <h5>온라인 프로덕트 서비스 접수</h5>
                 <div id="myInfo">
                     <h6>개인 정보를 입력해 주세요.</h6>
-                    <input id="firstName" type="text" placeholder="성">
-                    <input id="secondName" type="text" placeholder="이름"><br>
+                    <input id="name" type="text" placeholder="이름"><br>
                     <input class="long" type="text" placeholder="연락처"><br>
-                    <input type="text" placeholder="이메일" id="mail"><select name="대한민국" id=""></select><br>
+                    <input type="text" placeholder="이메일" id="email"><select name="대한민국" id=""></select><br>
                     <input type="text" placeholder="우편번호"><button class="btnn">우편번호 검색</button><br>
                     <input class="long" type="text" placeholder="기본주소"><br>
                     <input class="long" type="text" placeholder="상세주소"><br>
                 </div>
                 <div id="product1">
                     <h6>제품 정보를 입력해 주세요.</h6>
-                    <input class="long" type="text" placeholder="모델 명을 입력해주세요.(필수항목)"><br>
+                    <input id="productName" class="long" type="text" placeholder="모델 명을 입력해주세요.(필수항목)"><br>
                     <input type="text" placeholder="구매처"><input type="text" placeholder="구매시기"><br>
                     <div class="boxs">
                         <div>보증서유무</div>
@@ -65,7 +64,7 @@
                         <button class="btnn">멤버십 없음</button>
                     </div>
                     <h6>예약내용</h6>
-                    <textarea rows="10" cols="90" id="textarea"></textarea>
+                    <textarea id="msg" rows="10" cols="90" id="textarea"></textarea>
                 </div>
                 <div id="product3">
                     <h6>수리 서비스 안내사항</h6>

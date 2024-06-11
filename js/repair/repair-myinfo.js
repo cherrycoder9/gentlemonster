@@ -1,41 +1,31 @@
-
-
 let memberList = [];
 
 
-function 조회() {
-    console.log('조회()');
-    let firstName = document.querySelector('#firstName').value;
-    let secondName = document.querySelector('#secondName').value;
-    let mail = document.querySelector('#mail').value;
+memberList = JSON.parse(localStorage.getItem('memberList'));
+if (memberList == null) { memberList = []; };
+console.log(memberList);
 
-    memberList = JSON.parse(localStorage.getItem('예약조회'));
-    console.log(memberList);
+let loginMemberId = sessionStorage.getItem('loginMemberId'); console.log(loginMemberId);
 
-    // 2. 기존 회원 목록에 있는 회원정보와 입력받은 데이터 일치 여부
-    console.log(firstName);
-    console.log(secondName);
-    console.log(mail);
+print();
+function print() {
 
-    for (let i = 0; i < memberList.length; i++) {
-        let member = memberList[i];
-        if (member.성 == firstName && member.이름 == secondName &&
-            member.메일 == mail) {
+    let printBox = document.querySelector('#printBox');
 
-            alert('조회 확인');
+    let html = '';
 
-            localStorage.setItem('예약조회', JSON.stringify(memberList)); //저장하기
-            // JS에서 페이지전환 해주는 속성
-            location.href = "repair_status.html";
+    let name = '';
 
-            return;
-
+    for (let a = 0; a < memberList.length; a++) {
+        if (loginMemberId == memberList[a].memberId) {
+            name = memberList[a].name;
+            email = memberList[a].email;
         }
 
     }
-    alert('일치하는 회원이 없습니다.');
+    html += ` <li>이름${name}</li>
+                <li>이메일${email} </li>`;
 
 
-
+    printBox.innerHTML = html;
 }
-
