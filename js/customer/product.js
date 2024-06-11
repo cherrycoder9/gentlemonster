@@ -47,9 +47,7 @@ function preloadProducts() {
             glassesList.push(i);
         }
 
-        // 프레임 칼라 분류 
-        // "White", "Black", "Pink", "Grey", "Red", "Brown", 
-        // "Clear", "Green", "Gold", "Blue", "Silver", "Yellow", "Other"
+        // 안경테색상 분류
         if (productList[i].frameColor == "White") {
             whiteList.push(i);
         } else if (productList[i].frameColor == "Black") {
