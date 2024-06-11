@@ -8,6 +8,11 @@ if (memberList == null) { memberList = []; };
 repairList = JSON.parse(localStorage.getItem('repairList'));
 if (repairList == null) { repairList = []; }
 
+loginMemberIndex = sessionStorage.getItem('loginMemberIndex');
+console.log(loginMemberIndex);
+document.querySelector('#name').value = memberList[loginMemberIndex - 1].name;
+document.querySelector('#email').value = memberList[loginMemberIndex - 1].email;
+
 
 function 등록() {
     console.log('등록()');
