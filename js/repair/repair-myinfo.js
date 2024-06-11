@@ -16,6 +16,7 @@ function 조회() {
     console.log(firstName);
     console.log(secondName);
     console.log(mail);
+
     for (let i = 0; i < 회원목록.length; i++) {
         let member = 회원목록[i];
         if (member.성 == firstName && member.이름 == secondName &&
@@ -23,9 +24,6 @@ function 조회() {
 
             alert('조회 확인');
 
-            console.log(member.firstName, firstName);
-            console.log(member.secondName, secondName);
-            console.log(member.mail, mail);
             localStorage.setItem('예약조회', JSON.stringify(회원목록)); //저장하기
             // JS에서 페이지전환 해주는 속성
             location.href = "repair_status.html";

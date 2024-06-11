@@ -50,14 +50,22 @@
                 </div>
                 <div id="product1">
                     <h6>제품 정보를 입력해 주세요.</h6>
-                    <input type="text" placeholder="모델 명을 입력해주세요.(필수항목)"><br>
+                    <input class="long" type="text" placeholder="모델 명을 입력해주세요.(필수항목)"><br>
                     <input type="text" placeholder="구매처"><input type="text" placeholder="구매시기"><br>
-                    <div>보증서유무<button class="btnn">보증서 있음</button><button class="btnn">보증서 없음</button></div>
+                    <div class="boxs">
+                        <div>보증서유무</div>
+                        <button class="btnn">보증서 있음</button>
+                        <button class="btnn">보증서 없음</button>
+                    </div>
                 </div>
                 <div id="product2">
-                    <div>멤버십유무<button class="btnn">멤버십 있음</button><button class="btnn">멤버십 없음</button></div>
-                    <h6>제품 정보를 입력해 주세요.</h6>
-                    <textarea rows="10" cols="60"></textarea>
+                    <div class="boxs">
+                        <div>멤버십유무</div>
+                        <button class="btnn">멤버십 있음</button>
+                        <button class="btnn">멤버십 없음</button>
+                    </div>
+                    <h6>예약내용</h6>
+                    <textarea rows="10" cols="90" id="textarea"></textarea>
                 </div>
                 <div id="product3">
                     <h6>수리 서비스 안내사항</h6>
@@ -90,13 +98,12 @@
                 <button id="접수하기" type="button" onclick="등록()">접수하기</button>
             </div>
         </div>
-
     </div>
-
-
-
-
-
+    <div id="onlineSer">
+        <div>더 궁금한 사항이 있거나 다른 도움이 필요하시면 아래의 버튼을 눌러 문의해 주시기 바랍니다.
+        </div>
+        <div id="btn"><button class="접수하기">문의하기</button></div>
+    </div>
 
     <footer></footer>
 </body>
