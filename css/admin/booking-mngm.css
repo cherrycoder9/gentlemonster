@@ -24,10 +24,45 @@
     width: 875px;
     height: 910px;
 }
+
 #content h2 {
     margin-bottom: 30px;
 }
-#currentPage{
+
+#currentPage {
     font-weight: bold;
     text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody {
+    text-align: center;
+    align-items: center;
+}
+
+td {
+    padding: 5px 0px;
+}
+
+table>thead>tr {
+    border-bottom: 1px solid #ebebeb;
+}
+
+table>thead>tr>th {
+    padding-bottom: 10px;
+}
+
+#currentPage {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+tbody button {
+    display: inline;
+    justify-content: center;
+    width: 120px;
 }

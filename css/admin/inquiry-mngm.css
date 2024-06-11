@@ -28,28 +28,35 @@
 #content h2 {
     margin-bottom: 30px;
 }
-table{ 
+
+table {
     width: 100%;
     border-collapse: collapse;
 }
-tbody{
+
+tbody {
     text-align: center;
     align-items: center;
 }
-td{
+
+td {
     padding: 5px 0px;
 }
-table > thead > tr{
+
+table>thead>tr {
     border-bottom: 1px solid #ebebeb;
 }
-table > thead > tr > th{
+
+table>thead>tr>th {
     padding-bottom: 10px;
 }
-#currentPage{
+
+#currentPage {
     font-weight: bold;
     text-decoration: underline;
 }
-tbody button{
+
+tbody button {
     display: inline;
     justify-content: center;
     width: 120px;

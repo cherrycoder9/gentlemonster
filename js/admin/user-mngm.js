@@ -6,7 +6,27 @@ console.log(memberList);
 
 let loginMemberId = sessionStorage.getItem('loginMemberId'); console.log(loginMemberId);
 
+_checkAdmin();
 
+function _checkAdmin() {
+    console.log('_checkAdmin()');
+
+    let checkAdmin = false;
+
+    console.log(loginMemberId);
+
+    for (let a = 0; a < memberList.length; a++) {
+        if (loginMemberId == memberList[a].memberId) {
+            checkAdmin = memberList[a].isAdmin;
+        }
+    }
+    console.log(checkAdmin);
+
+    if (checkAdmin == false) {
+        alert('관리자만 접근 가능합니다.');
+        location.href = '../index.html';
+    }
+}
 
 _print();
 
@@ -44,7 +64,9 @@ function _change(i) {
     // 새로운 데이터를 배열에 저장했으면 localStorage 다시 저장한다.
     localStorage.setItem('memberList', JSON.stringify(memberList));
 
+    _checkAdmin();
     _print();
+
 }
 function _delete(i) {
     console.log('_delete()');

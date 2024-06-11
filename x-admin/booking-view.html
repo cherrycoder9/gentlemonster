@@ -7,7 +7,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/admin/inquiry-mngm.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/admin/booking-view.css'>
 
     <script src='../js/common/header.js' defer></script>
     <script src='../js/common/footer.js' defer></script>
@@ -28,28 +28,20 @@
         </div>
         <div id="content">
             <table>
-                <thead>
-                    <tr id="underline">
-                        <th> 번호 </th>
-                        <th> 성별 </th>
-                        <th> 작성자 </th>
-                        <th> 이메일 </th>
-                        <th> 주제 </th>
-                        <th> 제목 </th>
-                        <th> 작성일 </th>
-                        <th> 답변상태 </th>
-                    </tr>
-                </thead>
-
-                <tbody id="inquiryBox">
+                <thead> </thead>
+                <tbody id="repairBox">
 
                 </tbody>
             </table>
+            <div id="buttons">
+                <button type="button">답변하기</button>
+                <button onclick="_move()" type="button">목록보기</button>
+            </div>
         </div>
     </div>
     <footer></footer>
 
-    <script src='../js/admin/inquiry-mngm.js'></script>
+    <script src='../js/admin/booking-view.js'></script>
 </body>
 
 </html>
