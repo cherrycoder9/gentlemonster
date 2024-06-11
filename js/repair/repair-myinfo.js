@@ -22,8 +22,8 @@ function print() {
             email = memberList[a].email;
         }
     }
-    html += ` <li>이름${name}</li>
-                <li>이메일${email} </li>`;
+    html += ` <li><div>이름ㅤ</div>${name}</li>
+                <li><div>이메일</div>${email} </li>`;
 
 
     printBox.innerHTML = html;

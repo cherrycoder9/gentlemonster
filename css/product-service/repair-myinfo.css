@@ -96,3 +96,48 @@ input:focus {
     padding: 0px;
 
 }
+
+#printBox>li {
+    display: flex;
+
+}
+
+#printBox>li>div {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+a {
+    color: black;
+    /* <a> 태그 자체의 글씨 색을 검정색으로 변경 */
+    text-decoration: none !important;
+    /* 밑줄을 제거 */
+}
+
+a * {
+    color: black;
+    /* <a> 태그 아래의 모든 자식 요소의 글씨 색을 검정색으로 변경 */
+    text-decoration: none !important;
+    /* 자식 요소에서도 밑줄 제거 */
+}
+
+a:visited {
+    color: black;
+    /* 방문한 링크의 글씨 색을 검정색으로 변경 */
+    text-decoration: none !important;
+    /* 밑줄을 제거 */
+}
+
+a:active {
+    color: black;
+    /* 클릭한 링크의 글씨 색을 검정색으로 변경 */
+    text-decoration: none !important;
+    /* 밑줄을 제거 */
+}
+
+a:hover {
+    color: black;
+    /* 마우스를 올린 링크의 글씨 색을 검정색으로 변경 */
+    text-decoration: none !important;
+    /* 밑줄을 제거 */
+}
