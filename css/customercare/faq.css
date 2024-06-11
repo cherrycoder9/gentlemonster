@@ -57,3 +57,6 @@
     font-weight: bold;
     text-decoration: underline;
 }
+.notUse{
+    text-decoration: line-through;
+}

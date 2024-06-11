@@ -21,15 +21,15 @@
             <h2> 고객 서비스 </h2>
             <ul>
                 <li> <a href="customer-service.html"> 문의 </a> </li>
-                <li> <a href="#"> 배송 </a> </li>
-                <li> <a href="#"> 서비스 </a> </li>
-                <li> <a href="#"> 교환 및 반품 </a> </li>
-                <li> <a href="#"> 주문조회 </a> </li>
-                <li> <a href="#"> 주문취소 </a> </li>
-                <li> <a href="#"> 매장 픽업 서비스 </a> </li>
-                <li> <a href="#"> 수리 서비스 가이드 </a> </li>
-                <li> <a href="#"> 제품 사용 가이드 </a> </li>
-                <li> <a href="#"> 정품 인증 </a> </li>
+                <li> <a href="#" class="notUse"> 배송 </a> </li>
+                <li> <a href="#" class="notUse"> 서비스 </a> </li>
+                <li> <a href="#" class="notUse"> 교환 및 반품 </a> </li>
+                <li> <a href="#" class="notUse"> 주문조회 </a> </li>
+                <li> <a href="#" class="notUse"> 주문취소 </a> </li>
+                <li> <a href="#" class="notUse"> 매장 픽업 서비스 </a> </li>
+                <li> <a href="#" class="notUse"> 수리 서비스 가이드 </a> </li>
+                <li> <a href="#" class="notUse"> 제품 사용 가이드 </a> </li>
+                <li> <a href="#" class="notUse"> 정품 인증 </a> </li>
                 <li> <a href="faq.html"> FAQ </a> </li>
             </ul>
         </div>
@@ -71,16 +71,17 @@
                 </div>
                 <div class="contentBox2">
                     <p> 메시지 </p>
-                    <textarea id="msg" placeholder="메시지를 입력해주세요"></textarea> <br/>
+                    <textarea id="msg" placeholder="메시지를 입력해주세요"></textarea> <br />
                 </div>
                 <div id="checkBox">
-                    <input class="checkBoxes" type="checkbox" /> [필수] 만 14세 이상입니다<br/>
-                    <input class="checkBoxes" type="checkbox" /> [필수] 이용약관 동의<br/>
-                    <input class="checkBoxes" type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br/>
+                    <input name="cBox" class="checkBoxes" type="checkbox" onclick="selectAll(this)" /> 전체동의 <br />
+                    <input name="cBox" class=" checkBoxes" type="checkbox" /> [필수] 만 14세 이상입니다<br />
+                    <input name="cBox" class="checkBoxes" type="checkbox" /> [필수] 이용약관 동의<br />
+                    <input name="cBox" class="checkBoxes" type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br />
                     <button onclick="_submit()" type="button"> 게시판 등록하기 </button>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <footer></footer>
