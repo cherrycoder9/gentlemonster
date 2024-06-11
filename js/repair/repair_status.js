@@ -1,25 +1,26 @@
 
 // 1. 출력함수 : js가 열렸을때
+확인();
 
-function 조회() {
+function 확인() {
+    console.log('조회()');
     // * 
-    회원목록 = JSON.parse(localStorage.getItem('예약조회'));
+    memberList = JSON.parse(localStorage.getItem('예약조회'));
 
-    if (회원목록 == null) { 회원목록 = []; }
+    if (memberList == null) { memberList = []; }
 
     // 1. 어디에
-    let firstName = document.querySelector('#firstName').value;
     let result = document.querySelector('#result');
     console.log(firstName);
     // 2. 무엇을
     let html = '';
-    for (let i = 0; i < 회원목록.length; i++) {
-        if (firstName == 회원목록[i].성) {
+    for (let i = 0; i < memberList.length; i++) {
+        if (firstName == memberList[i].성) {
             console.log(html);
             html += ` <div> 
-                    ${회원목록[i].성}
-                    ${회원목록[i].이름}
-                    ${회원목록[i].메일}
+                    ${memberList[i].성}
+                    ${memberList[i].이름}
+                    ${memberList[i].메일}
                  </div>`;
         }
     }

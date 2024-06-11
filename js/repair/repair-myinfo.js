@@ -1,6 +1,6 @@
 
 
-let 회원목록 = [];
+let memberList = [];
 
 
 function 조회() {
@@ -9,28 +9,33 @@ function 조회() {
     let secondName = document.querySelector('#secondName').value;
     let mail = document.querySelector('#mail').value;
 
-    회원목록 = JSON.parse(localStorage.getItem('예약조회'));
-    console.log(회원목록);
+    memberList = JSON.parse(localStorage.getItem('예약조회'));
+    console.log(memberList);
 
     // 2. 기존 회원 목록에 있는 회원정보와 입력받은 데이터 일치 여부
     console.log(firstName);
     console.log(secondName);
     console.log(mail);
 
-    for (let i = 0; i < 회원목록.length; i++) {
-        let member = 회원목록[i];
+    for (let i = 0; i < memberList.length; i++) {
+        let member = memberList[i];
         if (member.성 == firstName && member.이름 == secondName &&
             member.메일 == mail) {
 
             alert('조회 확인');
 
-            localStorage.setItem('예약조회', JSON.stringify(회원목록)); //저장하기
+            localStorage.setItem('예약조회', JSON.stringify(memberList)); //저장하기
             // JS에서 페이지전환 해주는 속성
             location.href = "repair_status.html";
 
             return;
+
         }
+
     }
     alert('일치하는 회원이 없습니다.');
+
+
+
 }
 
