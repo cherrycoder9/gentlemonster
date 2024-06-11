@@ -51,7 +51,7 @@ function _repair() {
 
     for (let i = 0; i < repairList.length; i++) {
         for (let j = 0; j < memberList.length; j++) {
-            if (repairList[i].memberId == memberList[j].memberId) {
+            if (repairList[i].mamberId == memberList[j].mamberId) {
                 findId = j;
                 findRe = i;
             }
@@ -62,7 +62,8 @@ function _repair() {
                         <td> ${memberList[findId].gender} </td>
                         <td> ${memberList[findId].name} </td>
                         <td> ${memberList[findId].email} </td>
-                        <td><a href="repair-view.html?no=${repairList[findRe].repairNum}"> ${repairList[findRe].productName} </a> </td>
+                        <td> ${repairList[findRe].productName} </a> </td>
+                        <td> <a href="repair-view.html?no=${repairList[findRe].repairNum}">${repairList[findRe].수리내역} </a> </td>
                         <td> ${repairList[findRe].date} </td>
                         <td>${repairList[findRe].state}</td>
                         <td><button onclick="_change(${findRe})" type=button""> 완료</button></td>
