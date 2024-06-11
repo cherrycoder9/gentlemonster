@@ -1,39 +1,41 @@
+let repairList = [];
 let memberList = [];
-console.log(회원목록);
+
+memberList = JSON.parse(localStorage.getItem('memberList'));
+if (memberList == null) { memberList = []; };
+
+
+repairList = JSON.parse(localStorage.getItem('repairList'));
+if (repairList == null) { repairList = []; }
 
 
 function 등록() {
     console.log('등록()');
 
-    memberList = JSON.parse(localStorage.getItem('예약조회'));//가져오기
+    let name = document.querySelector('#name').value;
+    let mail = document.querySelector('#email').value;
+    let textarea = document.querySelector('#msg').value;
 
-    let firstName = document.querySelector('#firstName').value;
-    let secondName = document.querySelector('#secondName').value;
-    let mail = document.querySelector('#mail').value;
-    let textarea = document.querySelector('#textarea').value;
+    document.querySelector('#name').value = '';
+    document.querySelector('#email').value = '';
+    document.querySelector('#msg').value = '';
 
-    console.log(firstName);
+    console.log(repairList);
 
-    document.querySelector('#firstName').value = '';
-    document.querySelector('#secondName').value = '';
-    document.querySelector('#mail').value = '';
-    document.querySelector('#textarea').value = '';
-
-    let memberList = memberList.length != 0 ? memberList[memberList.length - 1].회원번호 + 1 : 1;
+    let repairNum = repairList.length != 0 ? repairList[repairList.length - 1].repairNum + 1 : 1;
     let 회원 = {
-        회원번호: 회원번호, 성: firstName, 이름:
-            secondName, 메일: mail, 수리내역: textarea
+        repairNum: repairNum, 이름:
+            name, 메일: mail, 수리내역: textarea
     };
 
     console.log(회원);
 
-    memberList.push(회원);
-    조회목록.push(회원);
+    repairList.push(회원);
+
     alert('제품등록 성공');
 
-    localStorage.setItem('예약조회', JSON.stringify(memberList)); //저장하기
+    localStorage.setItem('repairList', JSON.stringify(repairList)); //저장하기
 
-    console.log(회원목록);
 
     location.href = "repair_guide.html";
 

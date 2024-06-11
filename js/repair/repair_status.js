@@ -1,32 +1,32 @@
+let memberList = [];
+let repairList = [];
 
-// 1. 출력함수 : js가 열렸을때
-확인();
+memberList = JSON.parse(localStorage.getItem('memberList'));
+if (memberList == null) { memberList = []; };
+console.log(memberList);
 
-function 확인() {
-    console.log('조회()');
-    // * 
-    memberList = JSON.parse(localStorage.getItem('예약조회'));
+repairList = JSON.parse(localStorage.getItem('repairList'));//가져오기
 
-    if (memberList == null) { memberList = []; }
+print();
+function print() {
 
-    // 1. 어디에
     let result = document.querySelector('#result');
-    // 2. 무엇을
+
     let html = '';
-    for (let i = 0; i < memberList.length; i++) {
-        console.log(memberList[i].성);
-        console.log(memberList[i].이름);
-        console.log(memberList[i].메일);
-        if (firstName == memberList[i].성) {
-            html += ` <div> 
-                    ${memberList[i].성}
-                    ${memberList[i].이름}
-                    ${memberList[i].메일}
-                 </div>`;
+
+    let 접수번호 = '';
+    let 수리내역 = '';
+
+    for (let a = 0; a < memberList.length; a++) {
+        if (repairLis[a].메일 == memberList[a].mail) {
+            접수번호 = repairLis[a].접수번호;
+            메일 = repairLis[a].메일;
         }
+
     }
-    // 3. 출력/대입
+    html += ` <li>번호${접수번호}</li>
+                <li>${수리내역}수리 </li>`;
+
+
     result.innerHTML = html;
-};
-
-
+}
