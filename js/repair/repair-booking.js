@@ -22,10 +22,21 @@ function 등록() {
 
     console.log(repairList);
 
+    let date = new Date();
+
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let currentDate = date.getDate();
+
+    date = `${year}-${자릿수변환(month)}-${자릿수변환(currentDate)}`; console.log(date);
+
     let repairNum = repairList.length != 0 ? repairList[repairList.length - 1].repairNum + 1 : 1;
     let 회원 = {
-        repairNum: repairNum, 이름:
-            name, 메일: mail, 수리내역: textarea
+        repairNum: repairNum,
+        이름: name,
+        메일: mail,
+        수리내역: textarea,
+        date: date
     };
 
     console.log(회원);
@@ -39,6 +50,12 @@ function 등록() {
 
     location.href = "repair_guide.html";
 
+}
+function 자릿수변환(변환할값) {
+    // 만약에 월/일/시/분 (매개변수)가 10보다 작으면 앞에 '0' 연결하기
+    if (변환할값 < 10) { 변환할값 = '0' + 변환할값; }
+    // 반환
+    return 변환할값;
 }
 
 

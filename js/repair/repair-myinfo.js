@@ -14,14 +14,13 @@ function print() {
 
     let html = '';
 
-    let name = '';
+    let name = ''; let email = '';
 
     for (let a = 0; a < memberList.length; a++) {
         if (loginMemberId == memberList[a].memberId) {
             name = memberList[a].name;
             email = memberList[a].email;
         }
-
     }
     html += ` <li>이름${name}</li>
                 <li>이메일${email} </li>`;

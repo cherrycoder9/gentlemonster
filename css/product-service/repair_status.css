@@ -35,6 +35,12 @@
 #result {
     border-bottom: 1px solid#b3afab;
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#result>div {
+    margin: 50px;
 }
 
 /*================================================= */
