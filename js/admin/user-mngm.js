@@ -1,19 +1,24 @@
 let memberList = [];
 
+memberList = JSON.parse(localStorage.getItem('memberList'));
+if (memberList == null) { memberList = []; };
+console.log(memberList);
+
+let loginMemberId = sessionStorage.getItem('loginMemberId'); console.log(loginMemberId);
+
+
+
 _print();
 
-function _print(){  console.log('_print()');
+function _print() {
+    console.log('_print()');
 
-    memberList = JSON.parse(localStorage.getItem('memberList'));
-    if(memberList==null){memberList=[]};
-    console.log(memberList);
-    
     let printBox = document.querySelector('#printBox');
 
     let html = ``;
-    for(let i = 0 ; i < memberList.length ; i++){
-        
-        html+=`
+    for (let i = 0; i < memberList.length; i++) {
+
+        html += `
                     <tr>
                         <td> ${memberList[i].memberId} </td>
                         <td> ${memberList[i].email} </td>
@@ -29,22 +34,24 @@ function _print(){  console.log('_print()');
 
     printBox.innerHTML = html;
 }
-function _change(i){ console.log(i);
-    if(memberList[i].isAdmin == false){
+function _change(i) {
+    console.log(i);
+    if (memberList[i].isAdmin == false) {
         memberList[i].isAdmin = true;
-    }else{
+    } else {
         memberList[i].isAdmin = false;
-    }                                           console.log(memberList);
+    } console.log(memberList);
     // 새로운 데이터를 배열에 저장했으면 localStorage 다시 저장한다.
-    localStorage.setItem('memberList' , JSON.stringify( memberList ));
+    localStorage.setItem('memberList', JSON.stringify(memberList));
 
     _print();
 }
-function _delete(i){ console.log('_delete()');
-    memberList.splice(i , 1);
+function _delete(i) {
+    console.log('_delete()');
+    memberList.splice(i, 1);
 
     // 새로운 데이터를 배열에 저장했으면 localStorage 다시 저장한다.
-    localStorage.setItem('memberList' , JSON.stringify( memberList ));
+    localStorage.setItem('memberList', JSON.stringify(memberList));
 
     _print();
 }

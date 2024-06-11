@@ -71,16 +71,17 @@
                 </div>
                 <div class="contentBox2">
                     <p> 메시지 </p>
-                    <textarea id="msg" placeholder="메시지를 입력해주세요"></textarea> <br/>
+                    <textarea id="msg" placeholder="메시지를 입력해주세요"></textarea> <br />
                 </div>
                 <div id="checkBox">
-                    <input class="checkBoxes" type="checkbox" /> [필수] 만 14세 이상입니다<br/>
-                    <input class="checkBoxes" type="checkbox" /> [필수] 이용약관 동의<br/>
-                    <input class="checkBoxes" type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br/>
+                    <input name="cBox" class="checkBoxes" type="checkbox" onclick="selectAll(this)" /> 전체동의 <br />
+                    <input name="cBox" class=" checkBoxes" type="checkbox" /> [필수] 만 14세 이상입니다<br />
+                    <input name="cBox" class="checkBoxes" type="checkbox" /> [필수] 이용약관 동의<br />
+                    <input name="cBox" class="checkBoxes" type="checkbox" /> [필수] 개인정보 수집 및 이용 동의<br />
                     <button onclick="_submit()" type="button"> 게시판 등록하기 </button>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <footer></footer>
