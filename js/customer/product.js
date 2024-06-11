@@ -91,6 +91,21 @@ function preloadProducts() {
 
 renderProductList();
 function renderProductList() {
+    console.log(`renderProductList() 함수 진입`);
+
+    let selectedCategoryProduct = [];
+    let selectedMaterialProduct = [];
+    let selectedFrameColorProduct = [];
+    let showSelectedProductList = [];
+
+    console.log(`selectedCategoryProduct`, selectedCategoryProduct);
+    console.log(`selectedCategoryProduct.length`, selectedCategoryProduct.length);
+    console.log(`showSelectedProductList.length`, showSelectedProductList.length);
+
+
+
+
+
     let initProductList = '';
     for (let i = 0; i < productList.length; i++) {
         initProductList += `
@@ -110,6 +125,7 @@ function renderProductList() {
     products.forEach(product => {
         product.style.display = 'none';
     });
+    console.log(`renderProductList() 함수 종료`);
 }
 
 let checkStatus = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -121,9 +137,12 @@ showSunglasses.addEventListener('change', function () {
     if (showSunglasses.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[0] = 1;
+        renderProductList();
     } else {
+        renderProductList();
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[0] = 0;
+        renderProductList();
     }
 });
 // 카테고리
@@ -131,9 +150,11 @@ showGlasses.addEventListener('change', function () {
     if (showGlasses.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[1] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[1] = 0;
+        renderProductList();
     }
 });
 
@@ -145,9 +166,11 @@ showAcetate.addEventListener('change', function () {
     if (showAcetate.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[2] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[2] = 0;
+        renderProductList();
     }
 });
 // 재질 
@@ -155,9 +178,11 @@ showMetal.addEventListener('change', function () {
     if (showMetal.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[3] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[3] = 0;
+        renderProductList();
     }
 });
 // 재질 
@@ -165,9 +190,11 @@ showCombination.addEventListener('change', function () {
     if (showCombination.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[4] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[4] = 0;
+        renderProductList();
     }
 });
 
@@ -177,9 +204,11 @@ showWhite.addEventListener('change', function () {
     if (showWhite.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[5] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[5] = 0;
+        renderProductList();
     }
 });
 
@@ -189,9 +218,11 @@ showBlack.addEventListener('change', function () {
     if (showBlack.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
         checkStatus[6] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
         checkStatus[6] = 0;
+        renderProductList();
     }
 });
 
@@ -200,10 +231,12 @@ const showPink = document.querySelector('#showPink');
 showPink.addEventListener('change', function () {
     if (showPink.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[7] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[7] = 0;
+        renderProductList();
     }
 });
 
@@ -212,10 +245,12 @@ const showGrey = document.querySelector('#showGrey');
 showGrey.addEventListener('change', function () {
     if (showGrey.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[8] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[8] = 0;
+        renderProductList();
     }
 });
 
@@ -224,10 +259,12 @@ const showRed = document.querySelector('#showRed');
 showRed.addEventListener('change', function () {
     if (showRed.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[9] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[9] = 0;
+        renderProductList();
     }
 });
 
@@ -236,10 +273,12 @@ const showBrown = document.querySelector('#showBrown');
 showBrown.addEventListener('change', function () {
     if (showBrown.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[10] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[10] = 0;
+        renderProductList();
     }
 });
 
@@ -248,10 +287,12 @@ const showClear = document.querySelector('#showClear');
 showClear.addEventListener('change', function () {
     if (showClear.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[11] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[11] = 0;
+        renderProductList();
     }
 });
 
@@ -260,10 +301,12 @@ const showGreen = document.querySelector('#showGreen');
 showGreen.addEventListener('change', function () {
     if (showGreen.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[12] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[12] = 0;
+        renderProductList();
     }
 });
 
@@ -272,10 +315,12 @@ const showGold = document.querySelector('#showGold');
 showGold.addEventListener('change', function () {
     if (showGold.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[13] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[13] = 0;
+        renderProductList();
     }
 });
 
@@ -284,10 +329,12 @@ const showBlue = document.querySelector('#showBlue');
 showBlue.addEventListener('change', function () {
     if (showBlue.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[14] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[14] = 0;
+        renderProductList();
     }
 });
 
@@ -296,10 +343,12 @@ const showSilver = document.querySelector('#showSilver');
 showSilver.addEventListener('change', function () {
     if (showSilver.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[15] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[15] = 0;
+        renderProductList();
     }
 });
 
@@ -308,10 +357,12 @@ const showYellow = document.querySelector('#showYellow');
 showYellow.addEventListener('change', function () {
     if (showYellow.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[16] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[16] = 0;
+        renderProductList();
     }
 });
 
@@ -320,9 +371,11 @@ const showOther = document.querySelector('#showOther');
 showOther.addEventListener('change', function () {
     if (showOther.checked) {
         // 체크박스가 체크되었을 때 실행할 코드
-        checkStatus[6] = 1;
+        checkStatus[17] = 1;
+        renderProductList();
     } else {
         // 체크박스가 체크 해제되었을 때 실행할 코드
-        checkStatus[6] = 0;
+        checkStatus[17] = 0;
+        renderProductList();
     }
 });
