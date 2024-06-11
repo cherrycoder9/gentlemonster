@@ -2,10 +2,6 @@ console.log('js/object/product-list.js 파일 진입');
 // 상품 리스트 객체 관련 파일
 // 세원 파트
 
-// 프레임 색상과 소재 리스트
-const frameColors = ["White", "Black", "Pink", "Grey", "Red", "Brown", "Clear", "Green", "Gold", "Blue", "Silver", "Yellow", "Other"];
-const materials = ["Acetate", "Metal", "Combination"];
-
 // 폴더에 있는 사진 파일 수
 const sunglassesPhotoCount = 397;
 const glassesPhotoCount = 156;

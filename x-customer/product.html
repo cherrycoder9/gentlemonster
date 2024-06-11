@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>제품 라인업 | Gentle Monster</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/customer/product.css'>
+    <script src='../js/common/header.js' defer></script>
+    <script src='../js/common/footer.js' defer></script>
+    <script src='../js/object/product-list.js'></script>
+    <script src='../js/customer/product.js' defer></script>
+
+</head>
+<!-- 안경/선글라스 페이지 -->
+
+<body>
+    <header></header>
+
+
+    <form id="productFilter">
+        <div id="categoryFilter">
+            <h3>카테고리</h3>
+            <label>
+                <input type="checkbox" name="category" value="Sunglasses" id="showSunglasses">
+                Sunglasses
+            </label>
+            <label>
+                <input type="checkbox" name="category" value="Glasses" id="showGlasses">
+                Glasses
+            </label>
+        </div>
+        <div id="frameColorFilter">
+            <h3>프레임 색상</h3>
+            <!-- JS로 생성 -->
+        </div>
+        <div id="materialFilter">
+            <h3>재질</h3>
+            <label>
+                <input type="checkbox" name="material" value="Acetate" id="showAcetate">
+                Acetate
+            </label>
+            <label>
+                <input type="checkbox" name="material" value="Metal" id="showMetal">
+                Metal
+            </label>
+            <label>
+                <input type="checkbox" name="material" value="Combination" id="showCombination">
+                Metal
+            </label>
+        </div>
+    </form>
+
+    <div id="filteredProductList">
+        <!-- 상품 목록 -->
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
