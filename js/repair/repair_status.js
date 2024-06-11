@@ -1,31 +1,46 @@
 let memberList = [];
-let repairList = [];
+let repairList = []; console.log(repairList);
+
 
 memberList = JSON.parse(localStorage.getItem('memberList'));
 if (memberList == null) { memberList = []; };
 console.log(memberList);
 
 repairList = JSON.parse(localStorage.getItem('repairList'));//가져오기
+if (repairList == null) { repairList = []; };
+console.log(repairList);
 
-print();
-function print() {
+let loginMemberId = sessionStorage.getItem('loginMemberId'); console.log(loginMemberId);
+
+조회();
+
+function 조회() {
+    console.log('조회()');
 
     let result = document.querySelector('#result');
 
     let html = '';
 
-    let 접수번호 = '';
-    let 수리내역 = '';
+    let findId = 2;
 
     for (let a = 0; a < memberList.length; a++) {
-        if (repairLis[a].메일 == memberList[a].mail) {
-            접수번호 = repairLis[a].접수번호;
-            메일 = repairLis[a].메일;
+        if (loginMemberId == memberList[a].memberId) {
+            findId = a;
         }
-
     }
-    html += ` <li>번호${접수번호}</li>
-                <li>${수리내역}수리 </li>`;
+    let findNum = 4;
+
+    for (let i = 0; i < repairList.length; i++) {
+        if (memberList[findId].email == repairList[i].메일) {
+            findNum = i;
+        }
+    }
+
+    if (memberList[findId].email == repairList[findNum].메일) {
+        html += ` <li>${repairList[findNum].repairNum}</li>
+                <li>${repairList[findNum].수리내역}</li>
+                <li>${repairList[findNum].date}</li>`;
+    }
 
 
     result.innerHTML = html;
