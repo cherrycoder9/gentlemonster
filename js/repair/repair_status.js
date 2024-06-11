@@ -23,7 +23,8 @@ function 조회() {
                  </div>`;
         }
     }
-
     // 3. 출력/대입
     result.innerHTML = html;
 };
+
+
